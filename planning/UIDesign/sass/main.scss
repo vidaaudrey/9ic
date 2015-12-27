@@ -35,6 +35,13 @@ a {
 #app{
 }
 
+.card-small{
+
+}
+
+.card-big{
+
+}
 /*
  * Navbar styling
  * ========================================================================== */
@@ -74,7 +81,8 @@ nav {
  * ========================================================================== */
 
 main {
-    min-height: 400px;
+    margin: 60px auto;
+    min-height: 800px;
     background-color: $white-base;
 }
 
@@ -93,6 +101,25 @@ footer{
     background-color: $black-base;
     color: $gray-light;
 }
+
+
+/*
+ * Genre List styling
+ * ========================================================================== */
+#genre-list{
+    .card-small{
+        .thumbnail{
+            .caption {
+
+            }
+        }
+
+    }
+
+}
+
+
+
 
 
 

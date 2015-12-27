@@ -72,7 +72,8 @@ nav.navbar-default {
  * Main container styling
  * ========================================================================== */
 main {
-  min-height: 400px;
+  margin: 60px auto;
+  min-height: 800px;
   background-color: #FFF; }
 
 /*
@@ -86,6 +87,10 @@ footer {
   padding: 16px 0;
   background-color: #000;
   color: #B6B6B6; }
+
+/*
+ * Genre List styling
+ * ========================================================================== */
 
 
 /*
