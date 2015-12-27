@@ -8,6 +8,15 @@ npm start
 ```
 
 
+### Development
+1. Commit changes. Only do `$git submodule update` if you modified the docs directory. 
+```
+$git pull
+$git merge origin/"branch"
+$git submodule update
+```
+
+
 
 ### Commit Snapshots 
 1. d348244  `npm init`
@@ -21,6 +30,9 @@ npm start
 3. c23714e  "chore: update webpack config, setup react-hot-reload"
   * run `npm start` to start the server
   * visit [http://localhost:3000/](http://localhost:3000/)
-  * Try to change the content of 'App.js', and the browser refresh and load the content 
+  * Try to change the content of 'App.js', the browser will refresh and load the content 
 
-4. 
+4. | 421432e | chore: add wiki as submodule 
+  * `git submodule add https://github.com/vidaaudrey/9ic.wiki.git docs`
+
+
