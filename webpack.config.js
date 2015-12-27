@@ -2,7 +2,7 @@ module.exports = {
     entry: getEntrySources(['./src/entry.js']),
     output: {
         publicPath: 'http://localhost:8080/',
-        filename: 'build/bundle.js'
+        filename: 'public/bundle.js'
     },
     devtool: 'eval',
     module: {

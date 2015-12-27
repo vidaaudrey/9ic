@@ -14,9 +14,7 @@
     "url": "git+https://github.com/vidaaudrey/9ic.git"
   },
   "keywords": [
-    "\"tinder",
-    "for",
-    "movies\""
+    "tinder for movies"
   ],
   "dependencies": {
     "history": "^1.13.1",
