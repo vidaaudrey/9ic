@@ -12,10 +12,14 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch("./planning/UIDesign/**/*.scss", ['sass']);
-    gulp.watch("./planning/UIDesign/**/*.html").on('change', browserSync.reload);
+    gulp.watch("./planning/UIDesign/**/*.html").on('change', watchChangeHandler);
 });
 
-
+function watchChangeHandler(){
+    browserSync.reload();
+    gulp.src('./planning/UIDesign/style.css')
+    .pipe(gulp.dest('./public/'));
+};
 
 gulp.task('sass', function () {
   gulp.src('./planning/UIDesign/**/*.scss')
