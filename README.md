@@ -1,8 +1,16 @@
 ## 9ic - MovTinder 
 
+### Start 
+```
+git clone https://github.com/vidaaudrey/9ic
+npm install 
+npm start 
+```
 
 
-1. `npm init`
+
+### Commit Snapshots 
+1. d348244  `npm init`
 
 
 2. 539f7fe  Follow [Getting started with webpack and React, ES6 style](http://humaan.com/getting-started-with-webpack-and-react-es6-style/) to set up the project. 
