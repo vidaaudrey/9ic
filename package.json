@@ -1,0 +1,24 @@
+{
+  "name": "movtinder",
+  "version": "1.0.0",
+  "description": "A tinder-like web app for movies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidaaudrey/9ic.git"
+  },
+  "keywords": [
+    "\"tinder",
+    "for",
+    "movies\""
+  ],
+  "author": "9ic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vidaaudrey/9ic/issues"
+  },
+  "homepage": "https://github.com/vidaaudrey/9ic#readme"
+}
