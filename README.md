@@ -39,6 +39,6 @@ $git submodule update
   * `git submodule add https://github.com/vidaaudrey/9ic.wiki.git docs`
 
 
-5.  | chore: add gulp build for the UIDesign process 
+5. | d65b0be | chore: add gulp build for the UIDesign process 
   * The `gulp` task is only for Planning - UIDesign
   * At designing stage, start the gulp task by `gulp`, any change to the html and scss files under planning/UIDesign will be detected, and the browser will automatically reload the page. visit [http://localhost:3001/](http://localhost:3001/)
