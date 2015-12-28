@@ -6,6 +6,7 @@ git clone https://github.com/vidaaudrey/9ic
 npm install 
 npm start 
 ```
+Before you run the server, rename the  * ./src/config/configSec.example.js * to *./src/config/configSec.js * and add your TMDB API Key
 
 
 ### Development
