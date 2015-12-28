@@ -30,7 +30,7 @@ export default class GenreListItem extends Component {
              <a href="#" className="thumbnail">
                  <img src={this.state.poster} alt={this.props.name} />
                  <div className="caption text-center">
-                     <h3>{this.props.name} {this.props.id}</h3>
+                     <h3>{this.props.name}</h3>
                  </div>
              </a>
          </div>
