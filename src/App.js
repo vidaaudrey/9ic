@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
+import Router from 'react-router'
+import routes from './config/routes'
 
-class App extends Component {
-  render(){
-    return <div>Hello world! This is 9IC again</div>
-  }
-}
-
-export default App
+export default () =>
+    <Router>{routes}</Router>
