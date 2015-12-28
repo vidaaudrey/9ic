@@ -18,7 +18,6 @@ export default class GenreList extends Component {
     init(){
         apiTMDB.getGenre()
           .then(function(data){
-            console.log('genre', data.genres);
             this.setState({genre: data.genres})
           }.bind(this))
     }
@@ -34,8 +33,8 @@ export default class GenreList extends Component {
                 <div className="container " id="genre-list">
                        {
                            this.state.genre.map((g, index) => (
-                               <GenreListItem key={index} name={g.name} />
-                               ))
+                               <GenreListItem key={g.id} {...g} />
+                            ))
                        }
                 </div>
             </div>
