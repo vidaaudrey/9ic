@@ -2,78 +2,79 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-
 /*
  * Global styling
  * ========================================================================== */
 
-*{
-     @include box-shadow(none);
+* {
+    @include box-shadow(none);
 }
-html{
+
+html {
     font-size: 14px;
 }
+
 body {
     margin: 0;
     color: $black-base;
     font-size: 1.1rem;
     font-family: $roboto;
 }
+
 a {
     font-family: $roboto-slab;
     color: $link-color;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: $link-hover-color;
         text-decoration: none;
     }
 }
-.active{
+
+.active {
     color: $dark-primary-color !important;
 }
 
-#app{
-}
+#app {}
 
-.card-small{
+.card-small {}
 
-}
+.card-big {}
 
-.card-big{
 
-}
 /*
  * Navbar styling
  * ========================================================================== */
 
 nav {
-    &.navbar-default{
+    &.navbar-default {
         background-color: $primary-color;
         border: none;
-        .navbar-brand{
+        .navbar-brand {
             color: $white-base;
         }
-        .slogan{
+        .slogan {
             height: 100%;
             margin-right: 60px;
-            h4{
+            h4 {
                 margin: 16px;
                 line-height: 100%
             }
         }
         .navbar-right {
-            li{
-                a{
+            li {
+                a {
                     color: $black-base;
-                    &:active, &:hover{
+                    &:active,
+                    &:hover {
                         color: $dark-primary-color;
                     }
                 }
             }
         }
-
     }
-    
 }
+
 
 /*
  * Main container styling
@@ -86,12 +87,11 @@ main {
 }
 
 
-
-
- /*
+/*
   * Footer styling
   * ========================================================================== */
-footer{
+
+footer {
     height: 80px;
     width: 100%;
     padding: 16px 0;
@@ -103,20 +103,52 @@ footer{
 /*
  * Genre List styling
  * ========================================================================== */
-#genre-list{
-    .card-small{
-        .thumbnail{
-            .caption {
 
-            }
+#genre-list {
+    .card-small {
+        .thumbnail {
+            .caption {}
         }
-
     }
-
 }
 
 
+/*
+ * Home  styling
+ * ========================================================================== */
+
+#home {
+    .home-inner-box {
+        min-height: 400px;
+    }
+    .explore-links {
+        width: 100%;
+    }
+    .movie-search {
+        width: 100%;
+        .btn-success {
+            width: 80px;
+        }
+    }
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional, to align inner items 
+                              horizontally inside the column */
+}
 
 
+/*
+ * Component styling
+ */
 
-
+.movie-search {}

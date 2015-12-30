@@ -7,11 +7,12 @@
     <title>MovTinder</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
 <body>
     <div id="app">
+        <!-- 'Nav' Component -->
         <nav class="navbar navbar-default" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -28,14 +29,8 @@
                 <div class="pull-left slogan">
                     <h4>Love movies, enjoy life</h4>
                 </div>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="movie name...">
-                    </div>
-                    <button type="submit" class="btn btn-default">Search</button>
-                </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../Home/home.html" class="active">Home</a></li>
+                    <li><a href="../index.html" class="active">Home</a></li>
                     <li><a href="#">Explore</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
@@ -50,21 +45,44 @@
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-        <!-- end of nav -->
+        <!-- end of 'Nav' Component -->
         <main>
-            <div class="row">
-                <div class="container" id="genre-list">
-                    <div class="links">
-                        <a href="genre/genre-list.html" title="">Genre List </a>
+            <!--  'Home' component -->
+            <div class="container" id="home">
+                <div class="row vertical-align">
+                    <div class="col-xs-12 col-md-12 home-inner-box text-center">
+                        <div>
+                            <!--  'ExploreLinks' component -->
+                            <div class="explore-links">
+                                <ul class="list-inline">
+                                    <li><a href="#">Now Playing</a></li>
+                                    <li><a href="#">Popular</a></li>
+                                    <li><a href="#">Top Rated</a></li>
+                                    <li><a href="#">Upcoming</a></li>
+                                </ul>
+                            </div>
+                            <!--  end of 'ExploreLinks' component -->
+                            <!-- 'MovieSearch' component-->
+                            <div class="movie-search">
+                                <form class="form-inline" role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" size="36" maxlength="100" placeholder="The Day After...">
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Go</button>
+                                </form>
+                            </div>
+                            <!-- end of 'MovieSearch' component-->
+                        </div>
                     </div>
                 </div>
             </div>
+            <!--  end of 'Home' component -->
         </main>
-        <!-- end of main -->
+        <!-- 'Footer' Component -->
         <footer class="text-center">
             &copy; Copyright 2015 &nbsp; &nbsp; 9IC &nbsp; &nbsp;<a href="https://github.com/9ic/9ic"><i class="fa fa-github fa-2x"></i></a>
         </footer>
-        <!-- end of footer -->
+        <!-- end of 'Footer' Component -->
     </div>
 </body>
 
