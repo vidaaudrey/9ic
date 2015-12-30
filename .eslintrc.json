@@ -154,7 +154,7 @@
     "no-spaced-func": 2,
     "no-trailing-spaces": 2,
     "no-unneeded-ternary": 2,
-    "object-curly-spacing": 2,
+    "object-curly-spacing": [2, "always"],
     "one-var": [
       2,
       "never"
