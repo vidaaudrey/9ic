@@ -4,6 +4,7 @@ import common from '../../utils/common'
 import _ from 'lodash'
 
 
+
 export default class GenreListItem extends Component {
 
     constructor(props){
