@@ -1,3 +1,3 @@
 export default {
-    TMDB_API_KEY: 'PUT YOUR TOKEN HERE'
+    TMDBKEY: 'PUT YOUR TOKEN HERE'
 }
