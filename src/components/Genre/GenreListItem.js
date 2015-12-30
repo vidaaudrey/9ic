@@ -4,6 +4,10 @@ import common from '../../utils/common';
 import _ from 'lodash';
 
 export default class GenreListItem extends Component {
+  static propTypes = {
+    id: React.PropTypes.number.isRequired,
+    name: React.PropTypes.string.isRequired
+  }
 
   constructor(props) {
     super(props);
@@ -36,9 +40,3 @@ export default class GenreListItem extends Component {
     );
   }
 }
-
-
-GenreListItem.proTypes = {
-  id: React.PropTypes.number.isRequired,
-  name: React.PropTypes.string.isRequired,
-};
