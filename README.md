@@ -41,6 +41,13 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
   * The browser will reload the html file as soon as you make any changes on the SASS or HTML file 
 
 
+### TODO
+1. Components 
+  * Home
+    [ ] Home 
+    [ ] ExploreLinks
+    [ ] MovieSearch
+
 ### Commit Snapshots
 1. d348244  `npm init`
 
