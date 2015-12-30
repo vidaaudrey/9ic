@@ -48,6 +48,16 @@ a {
 .active {
   color: #FFA000 !important; }
 
+.vertical-align {
+  display: flex;
+  flex-direction: row; }
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 /*
  * Navbar styling
  * ========================================================================== */
@@ -102,21 +112,44 @@ footer {
   #home .movie-search .btn-success {
     width: 80px; }
 
-.vertical-align {
-  display: flex;
-  flex-direction: row; }
+/*
+ * MovieList  styling
+ * ========================================================================== */
+/*
+ * Other Component styling
+ */
+.movie-list-item {
+  max-height: 300px;
+  overflow: hidden; }
+  .movie-list-item.thumbnail img {
+    margin: 0;
+    width: 40%;
+    float: left;
+    padding: 2%; }
+  .movie-list-item.thumbnail .caption {
+    width: 56%;
+    float: right; }
+    .movie-list-item.thumbnail .caption a.movie-title {
+      color: #000;
+      font-size: 20px;
+      font-weight: 400;
+      display: inline-block;
+      margin-bottom: 8px; }
+      .movie-list-item.thumbnail .caption a.movie-title:hover {
+        color: #FFA000; }
 
-.vertical-align > [class^="col-"],
-.vertical-align > [class*=" col-"] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Optional, to align inner items 
-                              horizontally inside the column */ }
+.genre-link-item {
+  font-size: 16px; }
+
+.movie-short-intro p {
+  color: #727272; }
 
 /*
- * Component styling
+ * Override  styling
  */
+.pager li > a,
+.pager li > span {
+  border-radius: 0; }
 
 
 /*

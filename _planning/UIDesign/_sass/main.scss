@@ -41,6 +41,18 @@ a {
 
 .card-big {}
 
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /*
  * Navbar styling
@@ -132,23 +144,61 @@ footer {
     }
 }
 
-.vertical-align {
-    display: flex;
-    flex-direction: row;
+
+/*
+ * MovieList  styling
+ * ========================================================================== */
+
+
+/*
+ * Other Component styling
+ */
+
+.movie-search {}
+
+.movie-list-item {
+    max-height: 300px;
+    overflow: hidden;
+    &.thumbnail {
+        img {
+            margin: 0;
+            width: 40%;
+            float: left;
+            padding: 2%;
+        }
+        .caption {
+            width: 56%;
+            float: right;
+            a.movie-title {
+                color: $black-base;
+                font-size: 20px;
+                font-weight: 400;
+                display: inline-block;
+                margin-bottom: 8px;
+                &:hover {
+                    color: $dark-primary-color;
+                }
+            }
+        }
+    }
 }
 
-.vertical-align > [class^="col-"],
-.vertical-align > [class*=" col-"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Optional, to align inner items 
-                              horizontally inside the column */
+.genre-link-item {
+    font-size: 16px;
+}
+
+.movie-short-intro {
+    p {
+        color: $gray-dark;
+    }
 }
 
 
 /*
- * Component styling
+ * Override  styling
  */
 
-.movie-search {}
+.pager li>a,
+.pager li>span {
+    border-radius: 0;
+}
