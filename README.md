@@ -44,9 +44,17 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
 ### TODO
 1. Components 
   * Home
-    [ ] Home 
-    [ ] ExploreLinks
-    [ ] MovieSearch
+    - [ ] Home 
+    - [ ] ExploreLinks
+    - [ ] MovieSearch
+  * Movie 
+    - [ ] MovieList
+    - [ ] MovieListItem
+    - [ ]
+  * Tinder
+    - [ ]
+2. Redux
+  *
 
 ### Commit Snapshots
 1. d348244  `npm init`
