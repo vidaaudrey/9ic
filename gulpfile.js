@@ -8,24 +8,24 @@ var browserSync = require('browser-sync').create();
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "./planning/UIDesign/"
+        server: "./_planning/UIDesign/"
     });
 
-    gulp.watch("./planning/UIDesign/**/*.scss", ['sass']);
-    gulp.watch("./planning/UIDesign/**/*.html").on('change', watchChangeHandler);
+    gulp.watch("./_planning/UIDesign/**/*.scss", ['sass']);
+    gulp.watch("./_planning/UIDesign/**/*.html").on('change', watchChangeHandler);
 });
 
 function watchChangeHandler(){
     browserSync.reload();
-    gulp.src('./planning/UIDesign/style.css')
+    gulp.src('./_planning/UIDesign/style.css')
     .pipe(gulp.dest('./public/'));
 };
 
 gulp.task('sass', function () {
-  gulp.src('./planning/UIDesign/**/*.scss')
+  gulp.src('./_planning/UIDesign/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./planning/UIDesign/'))
+    .pipe(gulp.dest('./_planning/UIDesign/'))
     .pipe(browserSync.stream());
 });
  
