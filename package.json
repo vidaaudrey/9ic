@@ -8,7 +8,8 @@
     "webpack-server": "webpack-dev-server --hot --progress --colors",
     "web-server": "http-server -p 3000 .",
     "start": "npm run webpack-server & npm run web-server",
-    "deploy-server": "node server.js"
+    "deploy-server": "node server.js",
+    "lint": "eslint --fix src/; exit 0"
   },
   "repository": {
     "type": "git",
