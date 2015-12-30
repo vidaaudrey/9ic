@@ -1,3 +1,3 @@
 export default {
-    TMDBKEY: 'PUT YOUR TOKEN HERE'
-}
+  TMDBKEY: 'PUT YOUR TOKEN HERE'
+};
