@@ -34,7 +34,11 @@ npm run lint
 This will fix many (but not all) eslint errors, e.g. add missing semicolons, and then output the issues that need to be fixed manually.
 
 ### UI Design
-1. Most of the design files are in `/planning/UIDesign/` directory
+1. Most of the design files are in `/_planning/UIDesign/` directory
+2. When starting a new UIDesign 
+  * create a new directory in the UIDesign folder, and add related data static HTML files or any other data necessary. 
+  * run `gulp` and visit [http://localhost:3001](http://localhost:3001) to see the design. (You may want to add the necessary link at the home page for quick access)
+  * The browser will reload the html file as soon as you make any changes on the SASS or HTML file 
 
 
 ### Commit Snapshots
