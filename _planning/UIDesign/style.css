@@ -22,8 +22,8 @@
  * Additional setups
  * ========================================================================== */
 /*
- * Global styling
- * ========================================================================== */
+* Global styling
+* ========================================================================== */
 * {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -58,9 +58,29 @@ a {
   align-items: center;
   justify-content: center; }
 
+/* Circle Avatar Styles */
+.circle {
+  line-height: 0;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 50%;
+  transition: linear 0.25s;
+  height: 64px;
+  width: 64px; }
+  .circle img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%; }
+    .circle img:hover {
+      transition: ease-out 0.2s;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      -webkit-transition: ease-out 0.2s; }
+    .circle img a {
+      color: transparent; }
+
 /*
- * Navbar styling
- * ========================================================================== */
+* Navbar styling
+* ========================================================================== */
 nav.navbar-default {
   background-color: #FFC107;
   border: none; }
@@ -78,16 +98,16 @@ nav.navbar-default {
       color: #FFA000; }
 
 /*
- * Main container styling
- * ========================================================================== */
+* Main container styling
+* ========================================================================== */
 main {
   margin: 60px auto;
   min-height: 800px;
   background-color: #FFF; }
 
 /*
-  * Footer styling
-  * ========================================================================== */
+* Footer styling
+* ========================================================================== */
 footer {
   height: 80px;
   width: 100%;
@@ -96,11 +116,11 @@ footer {
   color: #B6B6B6; }
 
 /*
- * Genre List styling
- * ========================================================================== */
+* Genre List styling
+* ========================================================================== */
 /*
- * Home  styling
- * ========================================================================== */
+* Home  styling
+* ========================================================================== */
 #home .home-inner-box {
   min-height: 400px; }
 
@@ -113,30 +133,27 @@ footer {
     width: 80px; }
 
 /*
- * MovieList  styling
- * ========================================================================== */
+* MovieList  styling
+* ========================================================================== */
 /*
- * Other Component styling
- */
-.movie-list-item {
-  max-height: 300px;
-  overflow: hidden; }
-  .movie-list-item.thumbnail img {
-    margin: 0;
-    width: 40%;
-    float: left;
-    padding: 2%; }
-  .movie-list-item.thumbnail .caption {
-    width: 56%;
-    float: right; }
-    .movie-list-item.thumbnail .caption a.movie-title {
-      color: #000;
-      font-size: 20px;
-      font-weight: 400;
-      display: inline-block;
-      margin-bottom: 8px; }
-      .movie-list-item.thumbnail .caption a.movie-title:hover {
-        color: #FFA000; }
+* Other Component styling
+*/
+.movie-list-item.thumbnail img {
+  width: 100%;
+  margin: 15px 0; }
+
+.movie-item .thumbnail {
+  border: none; }
+
+.movie-item .movie-item-header .thumbnail {
+  border: none; }
+  .movie-item .movie-item-header .thumbnail img {
+    width: 100%;
+    margin: 15px 0; }
+
+.movie-item .movie-item-body h3 {
+  margin-top: 32px;
+  margin-bottom: 16px; }
 
 .genre-link-item {
   font-size: 16px; }
@@ -145,8 +162,8 @@ footer {
   color: #727272; }
 
 /*
- * Override  styling
- */
+* Override  styling
+*/
 .pager li > a,
 .pager li > span {
   border-radius: 0; }

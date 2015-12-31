@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">MovTinder1</a>
+                <a class="navbar-brand" href="#">Mindr</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -49,139 +49,249 @@
         <main>
             <!--  'MovieListPage' component -->
             <div class="container" id="movie-list">
-                <!-- 'Pager' Component -->
-                <div class="pager">
-                    <ul class="pagination pagination-lg">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
-                </div>
-                <!--  end of 'Pager' Component -->
-                <!-- 'MovieList' Component -->
-                <!-- 'MovieListItem' Component -->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="thumbnail clearfix movie-list-item">
-                        <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
-                        <div class="caption">
-                            <a class="movie-title" href="#">Lorem ipsum dolor sit amet, consectetur</a>
-                            <!-- 'StarRating' Component -->
-                            <div class="start-rating">
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </div>
-                            <!--  end of 'StarRating' Component -->
-                            <!-- 'GenreLinkItem' Component -->
-                            <div class="genre-link-item">
-                                <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
-                            </div>
-                            <!--  end of 'GenreLinkItem' Component -->
-                            <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
-                            <div class="movie-short-intro">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
-                                </p>
-                            </div>
-                            <!--  end of 'MovieShortIntro' Component -->
-                            <!-- 'LikeButtons' Component -->
-                            <div class="like-buttons">
-                                <a href="#" class="btn btn-success">Like</a>
-                                <a href="#" class="btn btn-danger">Dislike</a>
-                            </div>
-                            <!--  end of 'LikeButtons' Component -->
-                        </div>
+                <div class="col-sm-12 col-md-12">
+                    <!-- 'Pager' Component -->
+                    <div class="pager">
+                        <ul class="pagination pagination-lg">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
                     </div>
-                </div>
-                <!--  end of 'MovieListItem' Component -->
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="thumbnail clearfix movie-list-item">
-                        <img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!">
-                        <div class="caption">
-                            <a class="movie-title" href="#">Lorem ipsum dolor sit amet, consectetur</a>
-                            <div class="start-rating">
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
+                    <!--  end of 'Pager' Component -->
+                    <!-- 'MovieList' Component -->
+                    <!-- 'MovieListItem' Component -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="thumbnail clearfix movie-list-item">
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
                             </div>
-                            <div class="genre-link-item">
-                                <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
-                            </div>
-                            <div class="movie-short-intro">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
-                                </p>
-                            </div>
-                            <div class="like-buttons">
-                                <a href="#" class="btn btn-success">Like</a>
-                                <a href="#" class="btn btn-danger">Dislike</a>
+                            <div class="col-sm-12 col-md-6 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="thumbnail clearfix movie-list-item">
-                        <img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!">
-                        <div class="caption">
-                            <a class="movie-title" href="#">Lorem ipsum dolor sit amet, consectetur</a>
-                            <div class="start-rating">
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
+                    <!--  end of 'MovieListItem' Component -->
+                    <!-- 'MovieListItem' Component -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="thumbnail clearfix movie-list-item">
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
                             </div>
-                            <div class="genre-link-item">
-                                <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
-                            </div>
-                            <div class="movie-short-intro">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
-                                </p>
-                            </div>
-                            <div class="like-buttons">
-                                <a href="#" class="btn btn-success">Like</a>
-                                <a href="#" class="btn btn-danger">Dislike</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="thumbnail clearfix movie-list-item">
-                        <img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!">
-                        <div class="caption">
-                            <a class="movie-title" href="#">Lorem ipsum dolor sit amet, consectetur</a>
-                            <div class="start-rating">
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </div>
-                            <div class="genre-link-item">
-                                <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
-                            </div>
-                            <div class="movie-short-intro">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
-                                </p>
-                            </div>
-                            <div class="like-buttons">
-                                <a href="#" class="btn btn-success">Like</a>
-                                <a href="#" class="btn btn-danger">Dislike</a>
+                            <div class="col-sm-12 col-md-6 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
                             </div>
                         </div>
                     </div>
+                    <!--  end of 'MovieListItem' Component -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="thumbnail clearfix movie-list-item">
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
+                            </div>
+                            <div class="col-sm-12 col-md-6 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="thumbnail clearfix movie-list-item">
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
+                            </div>
+                            <div class="col-sm-12 col-md-6 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="thumbnail clearfix movie-list-item">
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
+                            </div>
+                            <div class="col-sm-12 col-md-6 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="thumbnail clearfix movie-list-item">
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
+                            </div>
+                            <div class="col-sm-12 col-md-6 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--  end of 'MovieList' Component -->
                 </div>
-                <!--  end of 'MovieList' Component -->
             </div>
             <!--  end of 'MovieListPage' component -->
         </main>

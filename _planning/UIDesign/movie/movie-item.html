@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MovTinder</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 'Nav' Component -->
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mindr</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="pull-left slogan">
+                    <h4>Love movies, enjoy life</h4>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html" class="active">Home</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="active">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <!-- end of 'Nav' Component -->
+        <main>
+            <!--  'MovieItemPage' component -->
+            <div class="container" id="movie-item-container">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 movie-item">
+                    <!-- 'Crumb' Component -->
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Movies</a>
+                        </li>
+                        <li class="active">Lorem ipsum dolor</li>
+                    </ol>
+                    <!--  end of 'Crumb' Component -->
+                    <!-- 'MovieItem' Component -->
+                    <!-- 'MovieItemHeader' Component -->
+                    <div class="row movie-item-header">
+                        <div class="thumbnail clearfix">
+                            <div class="col-sm-6 col-md-4">
+                                <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-8 caption">
+                                <a class="movie-title" href="#"><h4>Lorem ipsum dolor</h4></a>
+                                <!-- 'StarRating' Component -->
+                                <div class="start-rating">
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <!--  end of 'StarRating' Component -->
+                                <!-- 'GenreLinkItem' Component -->
+                                <div class="genre-link-item">
+                                    <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+                                </div>
+                                <!--  end of 'GenreLinkItem' Component -->
+                                <!-- 'MovieShortIntro' Component (will limit the size of the text) -->
+                                <div class="movie-short-intro">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit earum quis necessitatibus error deleniti.
+                                    </p>
+                                </div>
+                                <!--  end of 'MovieShortIntro' Component -->
+                                <!-- 'LikeButtons' Component -->
+                                <div class="like-buttons">
+                                    <a href="#" class="btn btn-success">Like</a>
+                                    <a href="#" class="btn btn-danger">Dislike</a>
+                                </div>
+                                <!--  end of 'LikeButtons' Component -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 'MovieItemBody' Component -->
+                    <div class="movie-item-body">
+                        <div class="row movie-item-intro">
+                            <h3>Introduction</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo incidunt reiciendis dignissimos perspiciatis id nemo, minus, ab ipsum. Minima ipsam facilis, libero reprehenderit, praesentium sint id dolorum enim molestiae cumque? Nesciunt mollitia aut, ipsam optio at, provident corporis? Nemo pariatur blanditiis doloribus nihil eum ex? Natus praesentium, harum repellendus, velit quo, incidunt ex ea minus, et dolore omnis unde quaerat necessitatibus earum dolor iste ab qui! Minus qui accusantium modi quas veniam nostrum, quasi voluptatum non odio. Odit aspernatur deleniti ipsum voluptate rem, esse magni a repellat sunt tempora excepturi ea qui, nulla magnam asperiores animi. Corrupti obcaecati id eveniet sequi tenetur laudantium possimus eum ut accusantium sint provident inventore, atque facere nemo fuga, voluptatum, doloremque autem voluptates. Quo quae quaerat quasi amet soluta explicabo eaque, accusantium velit eos unde provident excepturi voluptatibus alias ad beatae inventore ipsa error, voluptates tempore neque esse delectus. Magni voluptatum delectus distinctio accusamus quisquam.</p>
+                        </div>
+                        <div class="row movie-item-video">
+                            <h3>Trailer</h3>
+                            <!-- in the compoent, we'll try to see if we can use html 5 video tag  -->
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VCTen3-B8GU" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="row movie-item-who-liked">
+                            <h3>Who liked this movie</h3>
+                            <a href="#" class="circle">
+                                <img src="http://lorempixel.com/150/150/people/" alt="username">
+                            </a>
+                            <a href="#" class="circle"><img src="http://lorempixel.com/150/150/people/" alt="username"></a>
+                            <a href="#" class="circle"><img src="http://lorempixel.com/150/150/people/" alt="username"></a>
+                            <a href="#" class="circle"><img src="http://lorempixel.com/150/150/people/" alt="username"></a>
+                        </div>
+                        <div class="row movie-item-reviews">
+                            <h3>Reviews</h3>
+                            <div class="row review-item">
+                                <div class="col-md-2">
+                                    <a href="#" class="circle">
+                                        <img src="http://lorempixel.com/100/100/people/" alt="username">
+                                    </a>
+                                </div>
+                                <div class="col-md-10">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora earum, possimus aliquid amet delectus doloremque officia placeat deserunt debitis. Adipisci.
+                                </div>
+                            </div>
+                            <div class="row review-item">
+                                <div class="col-md-2">
+                                    <a href="#" class="circle">
+                                        <img src="http://lorempixel.com/100/100/people/" alt="username">
+                                    </a>
+                                </div>
+                                <div class="col-md-10">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora earum, possimus aliquid amet delectus doloremque officia placeat deserunt debitis. Adipisci.
+                                </div>
+                            </div>
+                            <div class="row review-item">
+                                <div class="col-md-2">
+                                    <a href="#" class="circle">
+                                        <img src="http://lorempixel.com/100/100/people/" alt="username">
+                                    </a>
+                                </div>
+                                <div class="col-md-10">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora earum, possimus aliquid amet delectus doloremque officia placeat deserunt debitis. Adipisci.
+                                </div>
+                            </div>
+                            <div class="row add-review-form">
+                                <h4>Add My Review</h4>
+                                <form action="" method="POST" role="form">
+                                    <div class="form-group">
+                                        <textarea name="review-text" class="form-control" rows="3" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary pull-right">Submit
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  end of 'MovieItemBody' Component -->
+                    <!--  end of 'MovieItemHeader' Component -->
+                    <!--  end of 'MovieItem' Component -->
+                </div>
+            </div>
+            <!--  end of 'MovieItemPage' component -->
+        </main>
+        <!-- 'Footer' Component -->
+        <footer class="text-center">
+            &copy; Copyright 2015 &nbsp; &nbsp; 9IC &nbsp; &nbsp;<a href="https://github.com/9ic/9ic"><i class="fa fa-github fa-2x"></i></a>
+        </footer>
+        <!-- end of 'Footer' Component -->
+    </div>
+</body>
+
+</html>
