@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import apiTMDB from '../../utils/apiTMDB';
-import common from '../../utils/common';
+import React, {
+  Component
+}
+from 'react';
+import apiTMDB from '../../helpers/apiTMDB';
+import common from '../../helpers/common';
 import _ from 'lodash';
 
 export default class GenreListItem extends Component {
@@ -23,20 +26,25 @@ export default class GenreListItem extends Component {
         const randomIndex = _.random(data.results.length - 1);
         // get the poster image's url
         const posterURL = common.getPosterURLByMovie(data.results[randomIndex]);
-        this.setState({ poster: posterURL });
+        this.setState({
+          poster: posterURL
+        });
       }.bind(this));
   }
 
   render() {
-    return (
-      <div className="col-xs-6 col-md-4 card-small">
-        <a href="#" className="thumbnail">
-          <img src={this.state.poster} alt={this.props.name} />
-          <div className="caption text-center">
-            <h3>{this.props.name}</h3>
-          </div>
-        </a>
-      </div>
+    return ( < div className = "col-xs-6 col-md-4 card-small" >
+      < a href = "#"
+      className = "thumbnail" >
+      < img src = {
+        this.state.poster
+      }
+      alt = {
+        this.props.name
+      }
+      /> < div className = "caption text-center" > < h3 > {
+        this.props.name
+      } < /h3> < /div > < /a> < /div >
     );
   }
 }
