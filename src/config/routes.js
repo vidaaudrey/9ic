@@ -6,22 +6,12 @@ from 'react-router';
 import Home from '../layouts/MainPage/Home';
 import Main from '../layouts/MainPage/Main';
 import Movie from '../layouts/Movie/Movie';
-import GenreList from '../layouts/Genre/GenreList';
+import GenreListPage from '../layouts/Genre/GenreListPage';
 
-export default ( < Route path = "/"
-  component = {
-    Main
-  } >
-  < Route path = "movie/:id"
-  component = {
-    Movie
-  }
-  /> < Route path = "genre/"
-  component = {
-    GenreList
-  }
-  /> < IndexRoute component = {
-    Home
-  }
-  /> < /Route>
+export default (
+  <Route path="/" component={Main}>
+    <Route path="movie/:id" component={Movie} />
+    <Route path="genre/" component={GenreListPage} />
+    <IndexRoute component={Home}/>
+  </Route>
 );
