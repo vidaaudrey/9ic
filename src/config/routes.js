@@ -3,7 +3,7 @@ import {
   Route, IndexRoute
 }
 from 'react-router'
-import Home from '../layouts/MainPage/Home'
+import Home from '../layouts/MainPage/HomePage'
 import Main from '../layouts/MainPage/Main'
 import Movie from '../layouts/Movie/Movie'
 import GenreListPage from '../layouts/Genre/GenreListPage'

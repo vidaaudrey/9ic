@@ -5,7 +5,7 @@ from 'react'
 import apiTMDB from '../helpers/apiTMDB'
 import GenreListWidget from '../components/GenreListWidget'
 
-export default class GenreListItem extends Component {
+export default class GenreListContainer extends Component {
 
   constructor(props) {
     super(props)
