@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import {
   Route, IndexRoute
 }
-from 'react-router';
-import Home from '../layouts/MainPage/Home';
-import Main from '../layouts/MainPage/Main';
-import Movie from '../layouts/Movie/Movie';
-import GenreListPage from '../layouts/Genre/GenreListPage';
+from 'react-router'
+import Home from '../layouts/MainPage/Home'
+import Main from '../layouts/MainPage/Main'
+import Movie from '../layouts/Movie/Movie'
+import GenreListPage from '../layouts/Genre/GenreListPage'
 
 export default (
   <Route path="/" component={Main}>
@@ -14,4 +14,4 @@ export default (
     <Route path="genre/" component={GenreListPage} />
     <IndexRoute component={Home}/>
   </Route>
-);
+)

@@ -1,10 +1,10 @@
 import React, {
   Component
 }
-from 'react';
-import apiTMDB from '../../helpers/apiTMDB';
-import common from '../../helpers/common';
-import _ from 'lodash';
+from 'react'
+import apiTMDB from '../../helpers/apiTMDB'
+import common from '../../helpers/common'
+import _ from 'lodash'
 
 export default class GenreListItem extends Component {
   static propTypes = {
@@ -13,23 +13,23 @@ export default class GenreListItem extends Component {
   }
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       poster: 'http://lorempixel.com/340/510/people'
-    };
+    }
   }
 
   componentDidMount() {
     apiTMDB.getMoviesByGenreId(this.props.id)
       .then(function (data) {
         // pick a random image as the poster for the genere
-        const randomIndex = _.random(data.results.length - 1);
+        const randomIndex = _.random(data.results.length - 1)
         // get the poster image's url
-        const posterURL = common.getPosterURLByMovie(data.results[randomIndex]);
+        const posterURL = common.getPosterURLByMovie(data.results[randomIndex])
         this.setState({
           poster: posterURL
-        });
-      }.bind(this));
+        })
+      }.bind(this))
   }
 
   render() {
@@ -45,6 +45,6 @@ export default class GenreListItem extends Component {
       /> < div className = "caption text-center" > < h3 > {
         this.props.name
       } < /h3> < /div > < /a> < /div >
-    );
+    )
   }
 }

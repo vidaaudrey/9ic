@@ -1,21 +1,21 @@
 import React, {
   Component
 }
-from 'react';
-import GenreListItem from './GenreListItem';
-import apiTMDB from '../../helpers/apiTMDB';
+from 'react'
+import GenreListItem from './GenreListItem'
+import apiTMDB from '../../helpers/apiTMDB'
 
 export default class GenreList extends Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       genre: []
-    };
+    }
   }
 
   componentDidMount() {
-    this.init();
+    this.init()
   }
 
   init() {
@@ -23,8 +23,8 @@ export default class GenreList extends Component {
       .then(function (data) {
         this.setState({
           genre: data.genres
-        });
-      }.bind(this));
+        })
+      }.bind(this))
   }
 
   render() {
@@ -38,6 +38,6 @@ export default class GenreList extends Component {
           />
         ))
       } < /div> < /div >
-    );
+    )
   }
 }

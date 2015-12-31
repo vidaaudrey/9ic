@@ -1,5 +1,5 @@
-import React from 'react';
-import GenreListItemWidget from './GenreListItemWidget';
+import React from 'react'
+import GenreListItemWidget from './GenreListItemWidget'
 
 export default ({
   genre
@@ -14,5 +14,5 @@ export default ({
       }
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default () => {
   return (
@@ -40,7 +40,7 @@ export default () => {
         </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
 

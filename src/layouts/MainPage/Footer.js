@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default () => {
   return (
@@ -9,7 +9,7 @@ export default () => {
         <i className="fa fa-github fa-2x"></i>
       </a>
     </footer>
-  );
-};
+  )
+}
 
 

@@ -1,11 +1,11 @@
-import Fetch from 'whatwg-fetch';
+import Fetch from 'whatwg-fetch'
 
 const get = (url) => (
   fetch(url)
   .then((res) =>
     res.json()
   )
-);
+)
 
 // default to json format
 const post = (url, data) => {
@@ -19,11 +19,11 @@ const post = (url, data) => {
   })
   .then((res) =>
       res.json()
-  );
-};
+  )
+}
 
 
 export default {
   get: get,
   post: post
-};
+}
