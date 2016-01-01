@@ -31,8 +31,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('deploy', function() {
+
   return gulp.src('./deploy/**/*')
     .pipe(ghPages());
+    //.pipe(gulp.dest('./deploy/'))
 });
 
 gulp.task('default', ['serve']);
