@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router'
 
-export default ({ image }) => {
+export default ({ image = './assets/placeholder300.png', targetLinkPath = '/', targetLinkText = '' }) => {
   return (
      <div className="col-sm-12 col-md-6 poster-image">
-         <a href="#"><img src={ image } alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"/></a>
+         <Link to={ targetLinkPath }>
+            <img src={ image } alt={ `image for ${ targetLinkText }`}/>
+         </Link>
      </div>
   )
 }

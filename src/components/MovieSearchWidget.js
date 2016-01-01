@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 export default class MovieSearchWidget extends Component {
-
   setRef(ref) {
     this.searchTextRef = ref
   }
