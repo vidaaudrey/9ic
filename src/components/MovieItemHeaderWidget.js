@@ -1,17 +1,17 @@
 import React from 'react'
+import PosterImageWidget from './PosterImageWidget'
 import StarRatingWidget from './StarRatingWidget'
 import GenreLinkWidget from './GenreLinkWidget'
 import MovieTextIntroWidget from './MovieTextIntroWidget'
-import LikeButtonsWidget  from './LikeButtonsWidget'
-import PosterImageWidget from './PosterImageWidget'
+import LikeButtonsWidget from './LikeButtonsWidget'
 
 export default () => {
   return (
-   <div className="col-sm-12 col-md-6 col-lg-4">
-       <div className="thumbnail clearfix movie-list-item">
+    <div className="row movie-item-header">
+       <div className="thumbnail clearfix">
            <PosterImageWidget/>
-           <div className="col-sm-12 col-md-6 caption">
-               <a className="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+           <div className="col-sm-6 col-md-8 caption">
+               <a className="movie-title" href="#"><h4>Lorem ipsum dolor</h4></a>
                <StarRatingWidget/>
                <GenreLinkWidget/>
                <MovieTextIntroWidget/>
