@@ -26,7 +26,7 @@ export default () => {
         </form>
         <ul className="nav navbar-nav navbar-right">
           <li><a href="#/" className="active">Home</a></li>
-          <li><a href="#/genre/">Explore</a></li>
+          <li><a href="#/movie/">Explore</a></li>
           <li><a href="#/genre/">Genre</a></li>
           <li className="dropdown">
             <a href="#" className="dropdown-toggle" data-toggle="dropdown">Login <b className="caret"></b></a>
