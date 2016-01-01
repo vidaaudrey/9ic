@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
+var ghPages = require('gulp-gh-pages');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
@@ -27,6 +28,11 @@ gulp.task('sass', function () {
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./_planning/UIDesign/'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./deploy/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['serve']);

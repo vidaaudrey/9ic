@@ -27,8 +27,7 @@ export default ({ history }) => {
 
         <ul className="nav navbar-nav navbar-right">
           <li><a href="#/" className="active">Home</a></li>
-          <li><a href="#/movie/">Movie List</a></li>
-          <li><a href="#/movie/item/">MovieItem</a></li>
+          <li><a href="#/movies/popular/">Explore</a></li>
           <li><a href="#/genre/">Genre</a></li>
           <li className="dropdown">
             <a href="#" className="dropdown-toggle" data-toggle="dropdown">Login <b className="caret"></b></a>
