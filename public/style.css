@@ -102,7 +102,7 @@ nav.navbar-default {
 * ========================================================================== */
 main {
   margin: 60px auto;
-  min-height: 800px;
+  min-height: 500px;
   background-color: #FFF; }
 
 /*
@@ -121,15 +121,15 @@ footer {
 /*
 * Home  styling
 * ========================================================================== */
-#home .home-inner-box {
+#home-container .home-inner-box {
   min-height: 400px; }
 
-#home .explore-links {
+#home-container .explore-links {
   width: 100%; }
 
-#home .movie-search {
+#home-container .movie-search {
   width: 100%; }
-  #home .movie-search .btn-success {
+  #home-container .movie-search .btn-success {
     width: 80px; }
 
 /*
@@ -167,6 +167,10 @@ footer {
 .pager li > a,
 .pager li > span {
   border-radius: 0; }
+
+.navbar-brand > img {
+  width: 150px;
+  margin-top: -18px; }
 
 
 /*

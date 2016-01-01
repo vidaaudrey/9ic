@@ -10,7 +10,7 @@ export default () => {
     <div className="row movie-item-header">
        <div className="thumbnail clearfix">
            <PosterImageWidget/>
-           <div className="col-sm-6 col-md-8 caption">
+           <div className="col-sm-6 col-md-6 caption">
                <a className="movie-title" href="#"><h4>Lorem ipsum dolor</h4></a>
                <StarRatingWidget/>
                <GenreLinkWidget/>

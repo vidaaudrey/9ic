@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 
 export default () => {
   return (
@@ -11,7 +11,9 @@ export default () => {
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="#">MovTinder</a>
+        <a className="navbar-brand" href="#">
+          <img src="assets/logo.png" alt="Mindr"/>
+        </a>
       </div>
 
       <div className="collapse navbar-collapse navbar-ex1-collapse">
@@ -26,7 +28,8 @@ export default () => {
         </form>
         <ul className="nav navbar-nav navbar-right">
           <li><a href="#/" className="active">Home</a></li>
-          <li><a href="#/movie/">Explore</a></li>
+          <li><a href="#/movie/">Movie List</a></li>
+          <li><a href="#/movie/item/">MovieItem</a></li>
           <li><a href="#/genre/">Genre</a></li>
           <li className="dropdown">
             <a href="#" className="dropdown-toggle" data-toggle="dropdown">Login <b className="caret"></b></a>

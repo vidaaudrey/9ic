@@ -120,7 +120,7 @@ nav {
 
 main {
     margin: 60px auto;
-    min-height: 800px;
+    min-height: 500px;
     background-color: $white-base;
 }
 
@@ -155,7 +155,7 @@ footer {
 * Home  styling
 * ========================================================================== */
 
-#home {
+#home-container {
     .home-inner-box {
         min-height: 400px;
     }
@@ -232,4 +232,8 @@ footer {
 .pager li>a,
 .pager li>span {
     border-radius: 0;
+}
+.navbar-brand>img{
+    width: 150px;
+    margin-top: -18px;
 }

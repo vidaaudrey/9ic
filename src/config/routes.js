@@ -14,7 +14,7 @@ export default (
     <Route path="movie/" component={MovieListPage} >
         // <Route path="movie/:id" component={MovieListPage} />
     </Route>
-        <Route path="item/" component={MovieItemPage} />
+    <Route path="movie/item/" component={MovieItemPage} />
     <Route path="genre/" component={GenreListPage} />
     <IndexRoute component={Home}/>
   </Route>
