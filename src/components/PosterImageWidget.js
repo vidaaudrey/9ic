@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default () => {
+export default ({ image }) => {
   return (
      <div className="col-sm-12 col-md-6 poster-image">
-         <a href="#"><img src="http://lorempixel.com/200/320/animals/" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"/></a>
+         <a href="#"><img src={ image } alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, debitis!"/></a>
      </div>
   )
 }

@@ -1,4 +1,4 @@
-## 9ic - MovTinder
+## 9ic - mindr
 
 ### Start
 ```

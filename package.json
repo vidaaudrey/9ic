@@ -1,5 +1,5 @@
 {
-  "name": "movtinder",
+  "name": "mindr",
   "version": "1.0.0",
   "description": "A tinder-like web app for movies",
   "main": "server.js",

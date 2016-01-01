@@ -4,18 +4,22 @@ import GenreLinkWidget from './GenreLinkWidget'
 import MovieTextIntroWidget from './MovieTextIntroWidget'
 import LikeButtonsWidget  from './LikeButtonsWidget'
 import PosterImageWidget from './PosterImageWidget'
+import { getLevelByPopularity } from '../utils/dataOp'
+import config from '../config/config'
 
-export default ({ title }) => {
-  console.log('movie', title);
+export default ({ title, popularity, overview, poster_path }) => {
+  console.log('movie', title, getLevelByPopularity(popularity), overview, `${config.TMDB_IMAGE_BASEURL}w500${poster_path}`);
   return (
-   <div className="col-sm-12 col-md-6 col-lg-4">
+   <div className="col-sm-12 col-md-6 col-lg-6">
        <div className="thumbnail clearfix movie-list-item">
-           <PosterImageWidget/>
+           <PosterImageWidget image={ `${config.TMDB_IMAGE_BASEURL}w500${poster_path}` }/>
            <div className="col-sm-12 col-md-6 caption">
-               <a className="movie-title" href="#"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
-               <StarRatingWidget/>
+               <a className="movie-title" href="#">
+                  <h4>{ title }</h4>
+                </a>
+               <StarRatingWidget level={getLevelByPopularity(popularity)} />
                <GenreLinkWidget/>
-               <MovieTextIntroWidget/>
+               <MovieTextIntroWidget text={ overview } maxLen={ config.OVERVIEW_MAX_LENGTH } maxHeight="40" />
                <LikeButtonsWidget/>
            </div>
        </div>
