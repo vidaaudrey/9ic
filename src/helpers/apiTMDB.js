@@ -3,6 +3,14 @@ import configSec from '../config/configSec'
 import config from '../config/config'
 
 
+// get all movies
+// filter options: now_playing, popular, top_rated, upcoming
+const getMovies = (filter) => {
+  const url = `${config.TMDB_BASEURL}movie/${filter}?api_key=${configSec.TMDBKEY}`
+  // console.log('getting movies', url)
+  return api.get(url)
+}
+
 const getGenre = () => {
   const url = `${config.TMDB_BASEURL}genre/movie/list?api_key=${configSec.TMDBKEY}`
   console.log('getting genres', url)
@@ -40,6 +48,7 @@ const getOnePosterForEachGenre = () => {
 
 export default {
   getGenre: getGenre,
+  getMovies: getMovies,
   getMoviesByGenreId: getMoviesByGenreId,
   getOneMovieForEachGenre: getOneMovieForEachGenre,
   getOnePosterForEachGenre: getOnePosterForEachGenre

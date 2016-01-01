@@ -13,8 +13,7 @@ import MovieItemPage from '../layouts/Movie/MovieItemPage'
 export default (
     <Router history={browserHistory}>
         <Route path="/" component={Main}>
-            <Route path="movie/" component={MovieListPage} >
-
+            <Route path="movies/:cat" component={MovieListPage} >
             </Route>
             <Route path="search/:keyword" component={MovieListPage} >
             </Route>

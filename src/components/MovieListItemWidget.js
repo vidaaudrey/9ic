@@ -5,7 +5,8 @@ import MovieTextIntroWidget from './MovieTextIntroWidget'
 import LikeButtonsWidget  from './LikeButtonsWidget'
 import PosterImageWidget from './PosterImageWidget'
 
-export default () => {
+export default ({ title }) => {
+  console.log('movie', title);
   return (
    <div className="col-sm-12 col-md-6 col-lg-4">
        <div className="thumbnail clearfix movie-list-item">
