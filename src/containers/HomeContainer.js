@@ -9,7 +9,7 @@ export default class HomeContainer extends Component {
     return (
       <div>
         <ExploreLinksWidget/>
-        <MovieSearchWidget/>
+        <MovieSearchWidget history={this.props.history} />
       </div>
     )
   }

@@ -1,7 +1,9 @@
 
 import React from 'react'
+import MovieSearchWidget from '../../components/MovieSearchWidget'
 
-export default () => {
+export default ({ history }) => {
+  
   return (
     <nav className="navbar navbar-default" role="navigation">
       <div className="navbar-header">
@@ -20,12 +22,9 @@ export default () => {
         <div className="pull-left slogan">
           <h4>Love movies, enjoy life</h4>
         </div>
-        <form className="navbar-form navbar-left" role="search">
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="movie name..."/>
-            </div>
-            <button type="submit" className="btn btn-default">Search</button>
-        </form>
+
+        <MovieSearchWidget history={history} className="navbar-form navbar-left"/>
+
         <ul className="nav navbar-nav navbar-right">
           <li><a href="#/" className="active">Home</a></li>
           <li><a href="#/movie/">Movie List</a></li>

@@ -1,19 +1,20 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 
 import Nav from './Nav'
 import Footer from './Footer'
 
+
 export default ({ children, history }) => {
   return (
     <div className="main">
-      <Nav/>
+        <Nav history={history} />
         <main>
-          {children}
+            {children}
         </main>
-      <Footer/>
+        <Footer/>
     </div>
-  )
+    )
 }
 
 
