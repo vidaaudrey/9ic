@@ -8,6 +8,8 @@ npm start
 ```
 Before you run the server, rename the  * ./src/config/configSec.example.js * to *./src/config/configSec.js * and add your TMDB API Key
 
+See [Live Demo](http://9ic.github.io/#/movies/now_playing)
+
 
 ### Development
 1. Commit changes. Only do `$git submodule update` if you modified the docs directory.

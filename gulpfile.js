@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
-var ghPages = require('gulp-gh-pages');
+//var ghPages = require('gulp-gh-pages');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
@@ -33,8 +33,12 @@ gulp.task('sass', function () {
 gulp.task('deploy', function() {
 
   return gulp.src('./deploy/**/*')
-    .pipe(ghPages());
-    //.pipe(gulp.dest('./deploy/'))
+    //.pipe(ghPages());
+    .pipe(gulp.dest('./deploy/'));
+    // because the limit of gh-pages site, we set up a different push dest:
+    // https://github.com/9ic/9ic.github.io.git
+    // cd to 'deploy' directory and push the files to github, and you can visit 
+    // http://9ic.github.io/ to see the live demo
 });
 
 gulp.task('default', ['serve']);

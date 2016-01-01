@@ -14,7 +14,7 @@ export default ({ title, popularity, overview, poster_path, id }) => {
   return (
    <div className="col-sm-12 col-md-6 col-lg-6">
        <div className="thumbnail clearfix movie-list-item">
-           <PosterImageWidget image={ `${config.TMDB_IMAGE_BASEURL}w500${poster_path}` } targetLinkPath={ `/movie/${ id }/` } targetLinkText={ title }  />
+           <PosterImageWidget image={ poster_path ? `${config.TMDB_IMAGE_BASEURL}w500${poster_path}` : null } targetLinkPath={ `/movie/${ id }/` } targetLinkText={ title }  placeholder="228x341" />
            <div className="col-sm-12 col-md-6 caption">
                <Link to={ `/movie/${ id }/` } className="movie-title">
                   <h4>{ title }</h4>
