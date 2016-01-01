@@ -2,12 +2,8 @@ import React from 'react'
 
 export default () => {
   return (
-    <div className="start-rating">
-        <span className="glyphicon glyphicon-star"></span>
-        <span className="glyphicon glyphicon-star"></span>
-        <span className="glyphicon glyphicon-star"></span>
-        <span className="glyphicon glyphicon-star"></span>
-        <span className="glyphicon glyphicon-star-empty"></span>
-    </div>
+    <div class="genre-link-item">
+       <a href="#" title="">Comedy</a> / <a href="#" title="">Fiction</a>
+   </div>
   )
 }
