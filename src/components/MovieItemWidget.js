@@ -4,14 +4,15 @@ import MovieItemHeaderWidget from './MovieItemHeaderWidget'
 import MovieItemBodyWidget from './MovieItemBodyWidget'
 import ReviewListWidget from './ReviewListWidget'
 import AddReviewFormWidget from './AddReviewFormWidget'
-export default () => {
+
+export default ({ movie }) => {
   return (
     <div className="movie-item">
         <CrumbWidget/>
-        <MovieItemHeaderWidget/>
-        <MovieItemBodyWidget/>
-        <ReviewListWidget/>
-        <AddReviewFormWidget/>
+        <MovieItemHeaderWidget {...movie} {...movie} />
+        <MovieItemBodyWidget {...movie} />
+        <ReviewListWidget {...movie} />
+        <AddReviewFormWidget {...movie} />
     </div>
   )
 }

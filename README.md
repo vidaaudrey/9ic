@@ -11,6 +11,13 @@ Before you run the server, rename the  * ./src/config/configSec.example.js * to 
 See [Live Demo](http://9ic.github.io/#/movies/now_playing)
 
 
+### Learn
+- [React.js Conf 2015 - Making your app fast with high-performance components](https://youtu.be/KYzlpRvWZ6c)
+- [React.js Conf 2015 - Hype!](https://youtu.be/z5e7kWSHWTg?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr)
+- [React.js Conf 2015 - Scalable Data Visualization](https://www.youtube.com/watch?v=2ii1lEkIv1s&index=15&list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr)
+- [React.js Conf 2015 - Refracting React](https://youtu.be/5hGHdETNteE?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr)
+
+
 ### Development
 1. Commit changes. Only do `$git submodule update` if you modified the docs directory.
 ```
@@ -44,7 +51,11 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
 
 
 ### TODO
-1. Components 
+* . Test 
+  [ ] Add Basic Test 
+
+* . Database Interaction 
+* . Components 
   * Home
     - [ ] Home 
     - [ ] ExploreLinks
@@ -55,8 +66,9 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
     - [ ]
   * Tinder
     - [ ]
-2. Redux
+* . Redux
   *
+
 
 ### Commit Snapshots
 1. d348244  `npm init`

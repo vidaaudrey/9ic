@@ -11,6 +11,12 @@ const getMovies = (filter) => {
   return api.get(url)
 }
 
+
+const getMovie = (id) => {
+  const url = `${config.TMDB_BASEURL}movie/${id}?api_key=${configSec.TMDBKEY}`
+  return api.get(url)
+}
+
 const getGenre = () => {
   const url = `${config.TMDB_BASEURL}genre/movie/list?api_key=${configSec.TMDBKEY}`
   console.log('getting genres', url)
@@ -49,6 +55,7 @@ const getOnePosterForEachGenre = () => {
 export default {
   getGenre: getGenre,
   getMovies: getMovies,
+  getMovie: getMovie,
   getMoviesByGenreId: getMoviesByGenreId,
   getOneMovieForEachGenre: getOneMovieForEachGenre,
   getOnePosterForEachGenre: getOnePosterForEachGenre

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-  // import apiTMDB from '../helpers/apiTMDB'
 import MovieListWidget from '../components/MovieListWidget.js'
 import apiTMDB from '../helpers/apiTMDB'
 

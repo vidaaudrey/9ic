@@ -3,7 +3,6 @@ import MovieListItemWidget from './MovieListItemWidget'
 import PagerWidget from './PagerWidget'
 
 export default ({ movies }) => {
-    console.log('got updated', movies)
 
   return (
     <div className="col-sm-12 col-md-12 movie-list">
