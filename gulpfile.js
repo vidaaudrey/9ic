@@ -30,15 +30,15 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
 
-  return gulp.src('./deploy/**/*')
-    //.pipe(ghPages());
+  return gulp.src('./public/**/*')
     .pipe(gulp.dest('./deploy/'));
-    // because the limit of gh-pages site, we set up a different push dest:
-    // https://github.com/9ic/9ic.github.io.git
-    // cd to 'deploy' directory and push the files to github, and you can visit 
-    // http://9ic.github.io/ to see the live demo
+  //.pipe(ghPages());
+  // because the limit of gh-pages site, we set up a different push dest:
+  // https://github.com/9ic/9ic.github.io.git
+  // cd to 'deploy' directory and push the files to github, and you can visit 
+  // http://9ic.github.io/ to see the live demo
 });
 
 gulp.task('default', ['serve']);
