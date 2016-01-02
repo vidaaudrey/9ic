@@ -53,7 +53,8 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
 
 ### TODO
 * Basic Features
-
+  [ ] Add more information to the MovieItemWidget `src/components/MovieItemWidget.js` (ref `_planning/UIDesign/Movie/movie.json` for data format)
+  
   [ ] Add GenreList 
     -  ref `_planning/UIDesign/Genre/genre.json` for the data format 
     - apiTMDB has getGenre() which will return a promise of the genre data 
