@@ -8,7 +8,8 @@ npm start
 ```
 Before you run the server, rename the  * ./src/config/configSec.example.js * to *./src/config/configSec.js * and add your TMDB API Key
 
-See [Live Demo](http://9ic.github.io/#/movies/now_playing)
+ - [Live Demo - Now Playing](http://9ic.github.io/#/movies/now_playing)
+ - [Live Demo - Search Movies](http://9ic.github.io/#/search/french)
 
 
 ### Learn
@@ -79,7 +80,7 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
 
   [ ] Complete StarRatingWidget
 
-Test 
+* Test 
   [ ] Add Basic Test 
 
 *  Database Interaction 

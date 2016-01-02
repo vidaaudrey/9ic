@@ -21,25 +21,25 @@ function renderMoviesHTML(movies) {
   )
 }
 
-function renderHeaderHTML(isLoading, isSearch) {
+function renderHeaderHTML(isLoading, isSearch, keywords) {
   if (isLoading && isSearch) {
-    return (<h2>Retrieving movie data by search ... </h2>)
+    return (<h2>Retrieving movie data by searching {keywords} ... </h2>)
   }
   if (isLoading && !isSearch) {
     return (<h2>Retrieving movie data ... </h2>)
   }
   if (!isLoading && isSearch) {
-    return (<h2> Search Results:  </h2>)
+    return (<h2> Search Results for {keywords}:  </h2>)
   }
   return null
 }
 
 export default ({
-  movies, isLoading, isSearch = true
+  movies, isLoading, isSearch = true, keywords = ''
 }) => {
   return (
       <div className="col-sm-12 col-md-12 movie-list">
-        {renderHeaderHTML(isLoading, isSearch)}
+        {renderHeaderHTML(isLoading, isSearch, keywords)}
         { isLoading ? null : renderMoviesHTML(movies) }
     < /div>
     )

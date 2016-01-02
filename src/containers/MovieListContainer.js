@@ -11,7 +11,8 @@ export default class MovieListContainer extends Component {
     this.state = {
       movies: [],
       isLoading: true,
-      isSearch: false
+      isSearch: false,
+      keywords: ''
     }
   }
   componentDidMount() {
@@ -52,13 +53,19 @@ export default class MovieListContainer extends Component {
         this.setState({
           movies: data.results,
           isLoading: false,
+          keywords: props.filter.keywords || '',
           isSearch: props.filter.keywords !== undefined
         })
       }.bind(this))
   }
 
   render() {
-    return <MovieListWidget movies = { this.state.movies } history={this.props.history} isLoading={this.state.isLoading} isSearch = {this.state.isSearch}/>
+    return <MovieListWidget
+      movies = { this.state.movies }
+      history={this.props.history}
+      isLoading={this.state.isLoading}
+      isSearch ={this.state.isSearch}
+      keywords={this.state.keywords} />
   }
 }
 
