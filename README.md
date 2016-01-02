@@ -61,7 +61,6 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
     - step1: add / update the routes.js  if necessary
     - step2: update the GenreListPage.js if necessary
     - step3: update the GenreListContainer.js 
-    - step4: update the GenreListContainer.js 
     - step4: update the GenreListWidget.js and GenreListItemWidget.js
 
   [ ] Add Like/Dislike  `src/components/LikeButtonsWidget.js`
@@ -81,10 +80,13 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
   [ ] Complete StarRatingWidget
 
 * Test 
+
   [ ] Add Basic Test 
 
 *  Database Interaction 
+
 *  Components 
+
   * Home
     - [X] Home 
     - [X] ExploreLinks
