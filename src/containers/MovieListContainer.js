@@ -10,7 +10,7 @@ export default class MovieListContainer extends Component {
     super(props)
     this.state = {
       movies: [],
-      isLoading: false,
+      isLoading: true,
       isSearch: false
     }
   }
@@ -18,9 +18,14 @@ export default class MovieListContainer extends Component {
     this.init(this.props)
   }
 
+  // since this container is shared between multiple routes (currently category and search route),
+  // when the route changes, we'll have to get the new data
   componentWillReceiveProps(nextProps) {
     console.log('props changing', nextProps)
-    this.state.movies = []
+    this.setState({
+      movies: [],
+      isLoading: true,
+    })
     this.init(nextProps)
   }
 
@@ -30,16 +35,12 @@ export default class MovieListContainer extends Component {
     // the only difference is the URL, so we structured the param word to be different
     // Search route: http://localhost:3000/#/search/hello
     // Category route: http://localhost:3000/#/movies/upcoming
-    this.setState({
-      isLoading: true
-    })
 
     let filter = 'popular'
     let moviesPromise
-    let isSearch = false;
-    if (props.filter.keyword) {
-      isSearch = true
-      filter = props.filter.keyword
+    console.log('keywords', props.filter.keywords)
+    if (props.filter.keywords) {
+      filter = props.filter.keywords
       moviesPromise = apiTMDB.getMoviesByKeywords(filter)
     } else if (props.filter.category) {
       filter = props.filter.category
@@ -49,9 +50,9 @@ export default class MovieListContainer extends Component {
     moviesPromise
       .then(function (data) {
         this.setState({
-          isSearch: isSearch,
           movies: data.results,
-          isLoading: false
+          isLoading: false,
+          isSearch: props.filter.keywords !== undefined
         })
       }.bind(this))
   }

@@ -1,9 +1,13 @@
-
 import React from 'react'
 import MovieSearchWidget from '../../components/MovieSearchWidget'
+import {
+  Link
+}
+from 'react-router'
 
-export default ({ history }) => {
-  
+export default ({
+  history
+}) => {
   return (
     <nav className="navbar navbar-default" role="navigation">
       <div className="navbar-header">
@@ -26,9 +30,17 @@ export default ({ history }) => {
         <MovieSearchWidget history={history} className="navbar-form navbar-left"/>
 
         <ul className="nav navbar-nav navbar-right">
-          <li><a href="#/" className="active">Home</a></li>
-          <li><a href="#/movies/popular/">Explore</a></li>
-          <li><a href="#/genre/">Genre</a></li>
+          <li> <Link to = '/' className="active"> Home </Link></li>
+          <li className="dropdown">
+            <a href="#" className="dropdown-toggle" data-toggle="dropdown">Explore <b className="caret"></b></a>
+            <ul className="dropdown-menu">
+              <li> <Link to = '/movies/popular' > Popular </Link></li>
+              <li> <Link to = '/movies/now_playing' > Now Playing </Link></li>
+              <li> <Link to = '/movies/top_rated' > Top Rated </Link></li>
+              <li> <Link to = '/movies/upcoming' > Upcoming </Link></li>
+            </ul>
+          </li>
+
           <li className="dropdown">
             <a href="#" className="dropdown-toggle" data-toggle="dropdown">Login <b className="caret"></b></a>
             <ul className="dropdown-menu">
@@ -43,5 +55,3 @@ export default ({ history }) => {
     </nav>
   )
 }
-
-

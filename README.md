@@ -51,6 +51,27 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
 
 
 ### TODO
+* Basic Features
+  [ ] Add GenreList 
+    - ref `_planning/UIDesign/Genre/genre.json` for the data format 
+    - apiTMDB has getGenre() which will return a promise of the genre data 
+    - ref `/src/containers/MovieListContainer.js` on how to process the data 
+    - step1: add / update the routes.js  if necessary
+    - step2: update the GenreListPage.js if necessary
+    - step3: update the GenreListContainer.js 
+    - step4: update the GenreListContainer.js 
+    - step4: update the GenreListWidget.js and GenreListItemWidget.js
+
+  [ ] Add Like/Dislike  `src/components/LikeButtonsWidget.js`
+  ---
+  [ ] Add pagination `src/components/PagerWidget.js`
+  [ ] Add Tinder interface 
+  [ ] Add user login / logout....
+  [ ] Add About
+  [ ] Complete Review related components
+  [ ] Complete CrumbWidget
+  [ ] Complete StarRatingWidget
+
 * . Test 
   [ ] Add Basic Test 
 
