@@ -1,4 +1,4 @@
-import Fetch from 'whatwg-fetch'
+// import Fetch from 'whatwg-fetch'
 
 const get = (url) => (
   fetch(url)
@@ -10,16 +10,16 @@ const get = (url) => (
 // default to json format
 const post = (url, data) => {
   fetch(url, {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  .then((res) =>
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then((res) =>
       res.json()
-  )
+    )
 }
 
 

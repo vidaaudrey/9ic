@@ -9,11 +9,11 @@ import GenreListPage from '../layouts/Genre/GenreListPage'
 import MovieListPage from '../layouts/Movie/MovieListPage'
 import MovieItemPage from '../layouts/Movie/MovieItemPage'
 
-            // <Route path="movie/:id" component={MovieListPage} />
+// <Route path="movie/:id" component={MovieListPage} />
 export default (
-    <Router history={browserHistory}>
+  <Router history={browserHistory}>
         <Route path="/" component={Main}>
-            <Route path="movies/:cat" component={MovieListPage} >
+            <Route path="movies/:category" component={MovieListPage} >
             </Route>
             <Route path="search/:keyword" component={MovieListPage} >
             </Route>

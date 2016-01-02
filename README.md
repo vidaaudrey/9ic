@@ -57,13 +57,12 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
 * . Database Interaction 
 * . Components 
   * Home
-    - [ ] Home 
-    - [ ] ExploreLinks
-    - [ ] MovieSearch
+    - [X] Home 
+    - [X] ExploreLinks
+    - [X] MovieSearch
   * Movie 
-    - [ ] MovieList
-    - [ ] MovieListItem
-    - [ ]
+    - [X] MovieList
+    - [X] MovieListItem
   * Tinder
     - [ ]
 * . Redux

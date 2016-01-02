@@ -1,4 +1,12 @@
-import React, { Component } from 'react'
+import React, {
+  Component
+}
+from 'react'
+
+import {
+  getQueryStringByString
+}
+from '../utils/dataOp'
 
 export default class MovieSearchWidget extends Component {
   setRef(ref) {
@@ -7,7 +15,9 @@ export default class MovieSearchWidget extends Component {
   handleSubmit() {
     const searchText = this.searchTextRef.value
     this.searchTextRef.value = ''
-    this.props.history.pushState(null, 'search/' + searchText)
+    this.props.history.pushState({
+      data: 'abc'
+    }, 'search/' + getQueryStringByString(searchText))
   }
   render() {
     return (
