@@ -1,0 +1,197 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700);
+/*
+ * Colors
+ * ========================================================================== */
+/*
+ * Typography
+ * ========================================================================== */
+/*
+ * Layout
+ * ========================================================================== */
+/*
+ * Media queries breakpoints
+ * ========================================================================== */
+/* Extra small screen / phone */
+/* Small screen / tablet */
+/* Medium screen / desktop */
+/* Large screen / wide desktop */
+/*
+ * Animations
+ * ========================================================================== */
+/*
+ * Additional setups
+ * ========================================================================== */
+/*
+* Global styling
+* ========================================================================== */
+* {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+html {
+  font-size: 14px; }
+
+body {
+  margin: 0;
+  color: #000;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif; }
+
+a {
+  font-family: "Roboto Slab", serif;
+  color: #FFC107; }
+  a:hover, a:focus {
+    color: #FFA000;
+    text-decoration: none; }
+
+.active {
+  color: #FFA000 !important; }
+
+.vertical-align {
+  display: flex;
+  flex-direction: row; }
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/* Circle Avatar Styles */
+.circle {
+  line-height: 0;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 50%;
+  transition: linear 0.25s;
+  height: 64px;
+  width: 64px; }
+  .circle img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%; }
+    .circle img:hover {
+      transition: ease-out 0.2s;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      -webkit-transition: ease-out 0.2s; }
+    .circle img a {
+      color: transparent; }
+
+/*
+* Navbar styling
+* ========================================================================== */
+nav.navbar-default {
+  background-color: #FFC107;
+  border: none; }
+  nav.navbar-default .navbar-brand {
+    color: #FFF; }
+  nav.navbar-default .slogan {
+    height: 100%;
+    margin-right: 60px; }
+    nav.navbar-default .slogan h4 {
+      margin: 16px;
+      line-height: 100%; }
+  nav.navbar-default .navbar-right li a {
+    color: #000; }
+    nav.navbar-default .navbar-right li a:active, nav.navbar-default .navbar-right li a:hover {
+      color: #FFA000; }
+
+/*
+* Main container styling
+* ========================================================================== */
+main {
+  margin: 60px auto;
+  min-height: 500px;
+  background-color: #FFF; }
+
+/*
+* Footer styling
+* ========================================================================== */
+footer {
+  height: 80px;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #000;
+  color: #B6B6B6; }
+
+/*
+* Genre List styling
+* ========================================================================== */
+/*
+* Home  styling
+* ========================================================================== */
+#home-container .home-inner-box {
+  min-height: 400px; }
+
+#home-container .explore-links {
+  width: 100%; }
+
+#home-container .movie-search {
+  width: 100%; }
+  #home-container .movie-search .btn-success {
+    width: 80px; }
+
+/*
+* MovieList  styling
+* ========================================================================== */
+/*
+* Other Component styling
+*/
+.movie-list-item.thumbnail img {
+  width: 100%;
+  margin: 15px 0; }
+
+.movie-item .thumbnail {
+  border: none; }
+
+.movie-item .movie-item-header .thumbnail {
+  border: none; }
+  .movie-item .movie-item-header .thumbnail img {
+    width: 100%;
+    margin: 15px 0; }
+
+.movie-item .movie-item-body h3 {
+  margin-top: 32px;
+  margin-bottom: 16px; }
+
+.genre-link-item {
+  font-size: 16px; }
+
+.movie-short-intro p {
+  color: #727272; }
+
+/*
+* Override  styling
+*/
+.pager li > a,
+.pager li > span {
+  border-radius: 0; }
+
+.navbar-brand > img {
+  width: 150px;
+  margin-top: -18px; }
+
+
+/*
+ * Colors
+ * ========================================================================== */
+/*
+ * Typography
+ * ========================================================================== */
+/*
+ * Layout
+ * ========================================================================== */
+/*
+ * Media queries breakpoints
+ * ========================================================================== */
+/* Extra small screen / phone */
+/* Small screen / tablet */
+/* Medium screen / desktop */
+/* Large screen / wide desktop */
+/*
+ * Animations
+ * ========================================================================== */
+/*
+ * Additional setups
+ * ========================================================================== */

@@ -1,0 +1,13 @@
+{
+  "name": "mindr",
+  "version": "1.0.0",
+  "description": "A tinder-like web app for movies",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "width": 1180,
+    "height": 750,
+    "title": "Tindr - Love movies, enjoy life",
+    "icon": "favicon-96x96.png"
+  }
+}
