@@ -38,6 +38,11 @@ a {
     color: $dark-primary-color !important;
 }
 
+.flex-row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 #app {}
 
 .card-small {}

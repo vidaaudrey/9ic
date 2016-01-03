@@ -17,7 +17,12 @@ function renderMoviesHTML(movies) {
     movies.map((movie) => <MovieListItemWidget key={ movie.id } {...movie} />)
   )
   return (
-    <div> <PagerWidget/> { moviesHTML } </div>
+    <div>
+      <PagerWidget/>
+      <div className="flex-row-wrap">
+        { moviesHTML }
+      </div>
+    </div>
   )
 }
 

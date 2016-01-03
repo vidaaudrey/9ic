@@ -51,6 +51,10 @@ a {
 .active {
   color: #FFA000 !important; }
 
+.flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap; }
+
 .vertical-align {
   display: flex;
   flex-direction: row; }
