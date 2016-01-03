@@ -15,13 +15,23 @@ function mainReducer(state = {}, action) {
     case 'LOGIN':
       console.log('actions in store', action, action.userId)
       return new Map({
-        userId: action.userId
+        userId: action.userId,
+        username: action.username
       })
     case 'LOGOUT':
       return new Map({
-        userId: null
+        userId: null,
+        username: null,
+        avatar: null
       })
-
+    case 'ADD_AVATAR':
+      {
+        return new Map({
+          userId: state.get('userId'),
+          username: state.get('username'),
+          avatar: action.avatar
+        })
+      }
     default:
       return state
   }
