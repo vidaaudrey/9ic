@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "A tinder-like web app for movies",
   "main": "server.js",
+  "window": {
+    "toolbar": false,
+    "width": 800,
+    "height": 600
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-server": "webpack-dev-server --hot --progress --colors",

@@ -47,7 +47,16 @@ To deploy, at the *root* directory, run
 npm run git-deploy
 ```
 
-
+### Create OSX App 
+Tutorial: [Creating Desktop Applicatio with node-webkit](https://strongloop.com/strongblog/creating-desktop-applications-with-node-webkit/)
+1. cd to `deploy` 
+2. put the downloaded nwjs files to this directory 
+4. run 
+```
+zip -r Mindr.nw *
+nwjs.app/Contents/MacOS/nwjs
+```
+![Desktop Screenshots](_screenshots/desktop-app.png)
 
 ### Linting
 A custom 'lint' script has been added to the package.json to fix most style errors and then show the remaining unfixed issues.

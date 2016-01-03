@@ -1,4 +1,5 @@
-// import Fetch from 'whatwg-fetch'
+import Fetch from 'whatwg-fetch'
+  // import fetch from 'node-fetch'
 
 const get = (url) => (
   fetch(url)
