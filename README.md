@@ -32,10 +32,22 @@ git submodule update
 ```
 
 ### Deploy
+
+This is only the temp solution. It will copy the public folder (except index.html) to  `deploy/` directory and push the updated files to a [separate git repo](https://github.com/9ic/9ic.github.io). If you don't have any new files, the command will fail. 
+
+To run the deploy successfully, first cd to deploy directory, and add `https://github.com/9ic/9ic.github.io.git` as your git remote. 
+```bash 
+➜  deploy git:(master) git remote -v
+origin  https://github.com/9ic/9ic.github.io.git (fetch)
+origin  https://github.com/9ic/9ic.github.io.git (push)
+```
+
+To deploy, at the *root* directory, run 
 ```
 npm run git-deploy
 ```
-This is only the temp solution. It will copy the public folder (except index.html) to  `deploy/ directory and push the updated files to a [separate git repo](https://github.com/9ic/9ic.github.io). If you don't have any new files, the command will fail 
+
+
 
 ### Linting
 A custom 'lint' script has been added to the package.json to fix most style errors and then show the remaining unfixed issues.
