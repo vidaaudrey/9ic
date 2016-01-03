@@ -11,8 +11,8 @@ Before you run the server, rename the  * ./src/config/configSec.example.js * to 
  - [Live Demo - Now Playing](http://9ic.github.io/#/movies/now_playing)
  - [Live Demo - Search Movies](http://9ic.github.io/#/search/french)
 
- - [Read Wiki](9ic.wiki/)
- - [Mindmap for the folder structure](MindrDevFlowChart.png)
+ - [Read Wiki](https://github.com/9ic/9ic/wiki)
+ - [Mindmap for the folder structure](MindrDevMindMap.png)
  - [Understand the App architecture](MindrDevFlowChart.png)
 
 
