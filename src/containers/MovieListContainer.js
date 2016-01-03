@@ -23,10 +23,6 @@ export default class MovieListContainer extends Component {
   // when the route changes, we'll have to get the new data
   componentWillReceiveProps(nextProps) {
     console.log('props changing', nextProps)
-    this.setState({
-      movies: [],
-      isLoading: true,
-    })
     this.init(nextProps)
   }
 
@@ -36,7 +32,9 @@ export default class MovieListContainer extends Component {
     // the only difference is the URL, so we structured the param word to be different
     // Search route: http://localhost:3000/#/search/hello
     // Category route: http://localhost:3000/#/movies/upcoming
-
+    this.setState({
+      isLoading: true,
+    })
     let filter = 'popular'
     let moviesPromise
     console.log('keywords', props.filter.keywords)

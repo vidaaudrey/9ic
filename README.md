@@ -11,6 +11,10 @@ Before you run the server, rename the  * ./src/config/configSec.example.js * to 
  - [Live Demo - Now Playing](http://9ic.github.io/#/movies/now_playing)
  - [Live Demo - Search Movies](http://9ic.github.io/#/search/french)
 
+ - [Read Wiki](9ic.wiki/)
+ - [Mindmap for the folder structure](MindrDevFlowChart.png)
+ - [Understand the App architecture](MindrDevFlowChart.png)
+
 
 ### Learn
 - [React.js Conf 2015 - Making your app fast with high-performance components](https://youtu.be/KYzlpRvWZ6c)
@@ -26,6 +30,12 @@ git pull
 git merge origin/"branch"
 git submodule update
 ```
+
+### Deploy
+```
+npm run git-deploy
+```
+This is only the temp solution. It will copy the public folder (except index.html) to  `deploy/ directory and push the updated files to a [separate git repo](https://github.com/9ic/9ic.github.io). If you don't have any new files, the command will fail 
 
 ### Linting
 A custom 'lint' script has been added to the package.json to fix most style errors and then show the remaining unfixed issues.
