@@ -1,13 +1,12 @@
-
 import React from 'react'
 import CircleImageLinkWidget from './CircleImageLinkWidget'
 import MovieTextIntroWidget from './MovieTextIntroWidget'
 import config from '../config/config'
+import MovieItemVideosContainer from '../containers/MovieItemVideosContainer'
 
-// figure out a way to add youtube video without react complaining, also need to check the video format the TMDB provides
-// <iframe width="100%" height="315" src="https://www.youtube.com/embed/VCTen3-B8GU" frameBorder="0" allowFullScreen></iframe>
-
-export default ({overview, poster_path, id }) => {
+export default ({
+  overview, id
+}) => {
   return (
     <div className="movie-item-body">
         <div className="row movie-item-intro">
@@ -17,8 +16,7 @@ export default ({overview, poster_path, id }) => {
         </div>
         <div className="row movie-item-video">
             <h3>Trailer</h3>
-            <b>Will add trailer here...</b>
-            <img src="http://lorempixel.com/800/500/animals/"/>
+            <MovieItemVideosContainer id={id} />
         </div>
         <div className="row movie-item-who-liked">
             <h3>Who liked this movie</h3>

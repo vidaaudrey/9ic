@@ -15,7 +15,7 @@
     "start": "npm run webpack-server & npm run web-server",
     "deploy-server": "node server.js",
     "lint": "eslint --fix src/; exit 0",
-    "git-deploy": "gulp copy-to-deploy && cd deploy && git add --all && git commit -m 'auto commit ' && git push"
+    "git-deploy": "webpack && gulp copy-to-deploy && cd deploy && git add --all && git commit -m 'auto commit ' && git push"
   },
   "repository": {
     "type": "git",

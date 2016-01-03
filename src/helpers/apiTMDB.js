@@ -7,6 +7,12 @@ const getMovie = (id) => {
   return api.get(url)
 }
 
+const getMovieVideosById = (id) => {
+  const url = `${config.TMDB_BASEURL}movie/${id}/videos?api_key=${configSec.TMDBKEY}`
+  console.log('getting videos for movie', url)
+  return api.get(url)
+}
+
 const getGenre = () => {
   const url = `${config.TMDB_BASEURL}genre/movie/list?api_key=${configSec.TMDBKEY}`
     // console.log('getting genres', url)
@@ -58,11 +64,12 @@ const getOnePosterForEachGenre = () => {
 
 
 export default {
-  getGenre: getGenre,
-  getMovie: getMovie,
-  getMoviesByCategory: getMoviesByCategory,
-  getMoviesByKeywords: getMoviesByKeywords,
-  getMoviesByGenreId: getMoviesByGenreId,
-  getOneMovieForEachGenre: getOneMovieForEachGenre,
-  getOnePosterForEachGenre: getOnePosterForEachGenre
+  getGenre,
+  getMovie,
+  getMovieVideosById,
+  getMoviesByCategory,
+  getMoviesByKeywords,
+  getMoviesByGenreId,
+  getOneMovieForEachGenre,
+  getOnePosterForEachGenre
 }

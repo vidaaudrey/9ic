@@ -5,11 +5,15 @@ import MovieItemBodyWidget from './MovieItemBodyWidget'
 import ReviewListWidget from './ReviewListWidget'
 import AddReviewFormWidget from './AddReviewFormWidget'
 
-export default ({ movie }) => {
+export default ({
+  movie
+}) => {
+  console.log('movie', movie)
+
   return (
     <div className="movie-item">
         <CrumbWidget/>
-        <MovieItemHeaderWidget {...movie} {...movie} />
+        <MovieItemHeaderWidget {...movie} />
         <MovieItemBodyWidget {...movie} />
         <ReviewListWidget {...movie} />
         <AddReviewFormWidget {...movie} />

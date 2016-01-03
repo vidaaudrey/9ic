@@ -37,7 +37,7 @@ export default class MovieListContainer extends Component {
     })
     let filter = 'popular'
     let moviesPromise
-    console.log('keywords', props.filter.keywords)
+      // console.log('keywords', props.filter.keywords)
     if (props.filter.keywords) {
       filter = props.filter.keywords
       moviesPromise = apiTMDB.getMoviesByKeywords(filter)

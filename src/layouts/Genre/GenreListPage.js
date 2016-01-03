@@ -6,7 +6,6 @@ export default () => {
     <div className="row">
         <h1> Genre List Container </h1>
          <GenreListContainer/>
-        
       </div>
   )
 }
