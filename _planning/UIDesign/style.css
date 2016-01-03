@@ -30,10 +30,13 @@
   box-shadow: none; }
 
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  position: relative;
+  min-height: 100%; }
 
 body {
   margin: 0;
+  margin-bottom: 80px;
   color: #000;
   font-size: 1.1rem;
   font-family: "Roboto", sans-serif; }
@@ -112,6 +115,9 @@ footer {
   height: 80px;
   width: 100%;
   padding: 16px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: #000;
   color: #B6B6B6; }
 

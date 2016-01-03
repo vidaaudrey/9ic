@@ -1,7 +1,5 @@
 import React from 'react'
-
 import Nav from './Nav'
-import Footer from './Footer'
 
 
 export default ({
@@ -13,7 +11,6 @@ export default ({
         <main>
             {children}
         </main>
-        <Footer/>
     </div>
   )
 }
