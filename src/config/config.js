@@ -11,4 +11,4 @@ export default {
 }
 
 
-// http: //graph.facebook.com/893335047440430/picture?type=large&redirect=false&width=400&height=400
+// http: //graph.facebook.com/893335047440430/picture?type=large&redirect=false&width=302&height=302
