@@ -34,7 +34,7 @@ export default ({
 
         <ul className="nav navbar-nav navbar-right">
           <li> <Link to = '/' className="active"> Home </Link></li>
-          <li> <Link to = '/mylikelist/' > My List </Link></li>
+          <li> <Link to = '/mylikelist/yes/' > My List </Link></li>
           <li className="dropdown">
             <a href="#" className="dropdown-toggle" data-toggle="dropdown">Explore <b className="caret"></b></a>
             <ul className="dropdown-menu">

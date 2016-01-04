@@ -1,9 +1,11 @@
 import React from 'react'
 import MyLikeListContainer from '../../containers/MyLikeListContainer'
-export default () => {
+export default ({
+  params
+}) => {
   return (
     <div className="container" id="movie-list-container">
-        <MyLikeListContainer />
+        <MyLikeListContainer isLike={params.isLike} />
     </div>
   )
 }

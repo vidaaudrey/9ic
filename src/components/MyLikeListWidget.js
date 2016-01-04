@@ -2,10 +2,20 @@ import React from 'react'
 import MyLikeListItemWidget from './MyLikeListItemWidget'
 import NoContentWidget from './NoContentWidget'
 import ExploreLinksWidget from './ExploreLinksWidget'
+import {
+  Link
+}
+from 'react-router'
 
+function renderHeaderLink(isLike) {
+  if (isLike) {
+    return <Link to={`/mylikelist/no`}> View No List</Link>
+  }
+  return <Link to={`/mylikelist/yes`}>View Yes List </Link>
+}
 
 function renderLikesHTML(likes) {
-  if (likes.length < 1 || !likes) {
+  if (likes.size < 1 || !likes) {
     return (
       <div>
             <NoContentWidget message="No liked movie yet" />
@@ -26,12 +36,13 @@ function renderLikesHTML(likes) {
 }
 
 export default ({
-  likes
+  likes, dislikes, isLike
 }) => {
   return (
     <div className="col-sm-12 col-md-12 my-like-list">
-        <h1>My Like List</h1>
-        {renderLikesHTML(likes)}
+        <h1>My {isLike ? 'YES' :  'NO'} List</h1>
+        {renderHeaderLink(isLike)}
+        {isLike ? renderLikesHTML(likes) : renderLikesHTML(dislikes)}
       </div>
   )
 }
