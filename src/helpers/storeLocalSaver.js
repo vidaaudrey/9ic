@@ -13,7 +13,6 @@ function stringifyDeep(obj) {
   return JSON.stringify(obj)
 }
 
-
 // save the state tree to the local storage
 export default () => {
   store.subscribe(() => {
