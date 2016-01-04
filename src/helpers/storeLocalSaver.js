@@ -1,4 +1,8 @@
 import store from '../store/store'
+import {
+  saveMovieData
+}
+from './apiFirebase'
 
 function stringifyDeep(obj) {
   for (var [key, value] of obj) {
@@ -18,6 +22,8 @@ export default () => {
     } else {
       localStorage.setItem('mindr', stringifyDeep(store.getState()))
       console.log('Saved app state to local storage')
+      saveMovieData(store.getState().toJS())
+      console.log('Saved app state to firebase')
     }
   })
 }
