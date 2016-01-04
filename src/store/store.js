@@ -64,7 +64,9 @@ function mainReducer(state = getInitalState(), action) {
         }))
         // call this when you hold a snapshort of the state and want to restore it (e.g. local storage)
     case 'SET_STATE':
-      return action.state
+      const appData = new Map(action.data)
+        // console.log('setting state from firebase data', appData, appData.get('username'))
+      return appData
 
     case 'LIKE':
       return state.merge(new Map({

@@ -9,6 +9,7 @@ import GenreListPage from '../layouts/Genre/GenreListPage'
 import MovieListPage from '../layouts/Movie/MovieListPage'
 import MovieItemPage from '../layouts/Movie/MovieItemPage'
 import MyLikeListPage from '../layouts/Movie/MyLikeListPage'
+import DemoListPage from '../layouts/MainPage/DemoListPage'
 
 export default (
   <Router history={browserHistory}>
@@ -20,6 +21,9 @@ export default (
             </Route>
             <Route path="movie/:id" component={MovieItemPage} />
             <Route path="mylikelist/:isLike" component={MyLikeListPage} />
+
+            <Route path="demo/:isLike/:isList" component={DemoListPage} />
+
             <Route path="genre/" component={GenreListPage} />
             <IndexRoute component={Home}/>
         </Route>

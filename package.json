@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "express": "^4.13.3",
+    "firebase": "^2.3.2",
     "gulp-git": "^1.6.1",
     "history": "^1.13.1",
     "immutable": "^3.7.6",
