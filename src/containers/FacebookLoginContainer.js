@@ -33,21 +33,22 @@ export default class FacebookLoginContainer extends React.Component {
     })
   }
 
+  // when user click login, this function will be called 
   callback(response) {
-    store.dispatch({
-      type: 'LOGIN',
-      userId: response.id,
-      username: response.name
-    })
-    this.setState({
-      userId: response.id,
-      isLoggedIn: true
-    })
+      store.dispatch({
+        type: 'LOGIN',
+        userId: response.id,
+        username: response.name
+      })
+      this.setState({
+        userId: response.id,
+        isLoggedIn: true
+      })
 
-    // now user is logged in, we'll fetch the avatar info
-    this.getAvatar(response.id)
-  }
-
+      // now user is logged in, we'll fetch the avatar info
+      this.getAvatar(response.id)
+    }
+    // get remote avatar url and add that url to the store 
   getAvatar(userId) {
     apiMisc.getFBAvatar(userId)
       .then(data => {

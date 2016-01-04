@@ -12,7 +12,8 @@ export default class MovieSearchWidget extends Component {
   setRef(ref) {
     this.searchTextRef = ref
   }
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault()
     const searchText = this.searchTextRef.value
     this.searchTextRef.value = ''
     this.props.history.pushState({

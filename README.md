@@ -82,6 +82,53 @@ This will fix many (but not all) eslint errors, e.g. add missing semicolons, and
   * The browser will reload the html file as soon as you make any changes on the SASS or HTML file 
 
 
+### Redux Store 
+We created a simple [Redux](https://github.com/rackt/redux) store so containers / components can reach out to find related data they need (Redux can help those nodes at the bottom to get data conveniently and clearly). The store holds the single point of truth. 
+
+We used [ImmutableJS](https://facebook.github.io/immutable-js/) to handle the storage of data. 
+
+All the store implementation is at `src/store/store.js`. It's very priminitive and we don't really have much time to extend the store tree. Right now, it only holds the basic userId, username and avatar info. 
+
+To quickly check how redux store is used in this app, check `src/containers/FacebookLoginContainer.js`. 
+
+**Listen to store changes**
+```js
+store.subscribe(() => {
+  if (store.getState().get('userId') !== null) {
+    this.setState({
+      isLoggedIn: true
+    })
+  } else {
+    //may not be such a good idea here... Need to figure out if there is a way to listen to single data point instead of the whole tree 
+    this.setState({
+      isLoggedIn: false,
+      userId: null,
+      avatar: config.FB_DEFAULT_AVARTAR_URL
+    })
+  }
+})
+```
+**Update the store**
+```js
+getAvatar(userId) {
+  apiMisc.getFBAvatar(userId)
+    .then(data => {
+      if (!data.is_silhouette) {
+        this.setState({
+          avatar: data.url,
+        })
+        //Dispatch to store 
+        store.dispatch({
+          type: 'ADD_AVATAR',
+          avatar: data.url
+        })
+      }
+    })
+}
+```
+
+
+
 ### TODO
 * Basic Features
 
