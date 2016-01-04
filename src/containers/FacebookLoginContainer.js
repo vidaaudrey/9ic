@@ -11,8 +11,7 @@ export default class FacebookLoginContainer extends React.Component {
     super(props)
     this.state = {
       userId: store.getState().get('userId') || null,
-      // isLoggedIn: store.getState().get('isLoggedIn') || false,
-      isLoggedIn: false,
+      isLoggedIn: store.getState().get('isLoggedIn') || false,
       avatar: config.FB_DEFAULT_AVARTAR_URL
     }
 
@@ -21,12 +20,6 @@ export default class FacebookLoginContainer extends React.Component {
       if (store.getState().get('isLoggedIn')) {
         this.setState({
           isLoggedIn: true
-        })
-      } else {
-        this.setState({
-          isLoggedIn: false,
-          userId: null,
-          avatar: config.FB_DEFAULT_AVARTAR_URL
         })
       }
     })

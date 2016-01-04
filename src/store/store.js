@@ -113,6 +113,15 @@ function mainReducer(state = getInitalState(), action) {
 
       }))
 
+    case 'LOGIN1':
+
+      console.log(action.data, action.data)
+      return state.merge(new Map({
+        userId: action.data.id,
+        name: action.data.displayName,
+        avatar: action.data.profileImageURL
+      }))
+
     case 'SETUP':
       return state
     default:

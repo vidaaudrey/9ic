@@ -1,5 +1,5 @@
+import store from '../store/store'
 var Firebase = require('firebase')
-
 export const firebaseRef = new Firebase('https://movtin.firebaseio.com')
 
 export const getAuth = firebaseRef.getAuth()
@@ -9,12 +9,16 @@ export const facebookLoginPopUp = () => {
     if (error) {
       console.log('Login Failed!', error)
     } else {
+      store.dispatch({
+        type: 'LOGIN1',
+        data: authData.facebook
+      })
       console.log(authData)
       firebaseRef.child('users').child(authData.uid).set({
         provider: authData.provider,
         name: authData.facebook.displayName,
         id: authData.facebook.id,
-        avatar: authData.facebook.profileImageUrl
+        avatar: authData.facebook.profileImageURL
       })
     }
   })

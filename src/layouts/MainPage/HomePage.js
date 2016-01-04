@@ -1,6 +1,12 @@
 import React from 'react'
 import HomeContainer from '../../containers/HomeContainer'
-export default ({ history }) => {
+import {
+  facebookLoginPopUp
+}
+from '../../helpers/apiFirebase'
+export default ({
+  history
+}) => {
   return (
     <div className="container" id="home-container">
         <div className="row vertical-align">
@@ -8,6 +14,10 @@ export default ({ history }) => {
                 <HomeContainer history={ history }/>
             </div>
         </div>
+        <div>
+            <button onClick={facebookLoginPopUp}></button>
+        </div>
+
     </div>
   )
 }
