@@ -1,12 +1,15 @@
 import React from 'react'
-import FacebookLogin from 'react-facebook-login'
+import FacebookLogin from '../helpers/FacebookLogin'
 import CircleImageLinkWidget from './CircleImageLinkWidget'
 import config from '../config/config.js'
+
 
 function renderLoggedoutHTML(callback) {
   return <FacebookLogin
          appId={config.FB_APP_ID}
          autoLoad={true}
+         size="small"
+         textButton='FB Login'
          callback={callback} />
 }
 

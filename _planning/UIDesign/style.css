@@ -171,6 +171,9 @@ footer {
 .movie-short-intro p {
   color: #727272; }
 
+.facebook-login-container {
+  margin: 8px; }
+
 /*
 * Override  styling
 */
@@ -181,6 +184,10 @@ footer {
 .navbar-brand > img {
   width: 150px;
   margin-top: -18px; }
+
+.nav > li {
+  height: 44px;
+  min-height: 44px; }
 
 
 /*

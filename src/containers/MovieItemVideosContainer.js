@@ -21,7 +21,7 @@ export default class MovieItemContainer extends Component {
   }
 
   init(props) {
-    // wait till we get a valid movie id, then we'll get the videos for that movie 
+    // wait till we get a valid movie id, then we'll get the videos for that movie
     if (props.id) {
       apiTMDB.getMovieVideosById(props.id)
         .then(function (data) {

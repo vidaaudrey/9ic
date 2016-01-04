@@ -16,6 +16,21 @@ export default class FacebookLoginContainer extends React.Component {
       }
       // for debug purpose, add the store listen here to listen login/out events
     storeLogger()
+
+    // subscribe to user login and logout events and udpate accordingly(for now, we are just dealing with logout event)
+    store.subscribe(() => {
+      if (store.getState().get('userId') !== null) {
+        this.setState({
+          isLoggedIn: true
+        })
+      } else {
+        this.setState({
+          isLoggedIn: false,
+          userId: null,
+          avatar: config.FB_DEFAULT_AVARTAR_URL
+        })
+      }
+    })
   }
 
   callback(response) {
@@ -52,7 +67,7 @@ export default class FacebookLoginContainer extends React.Component {
     return (
       <div>
         <FacebookLoginWidget
-            userId={this.state.username}
+            userId={this.state.userId}
             isLoggedIn={this.state.isLoggedIn}
             avatar={this.state.avatar}
             callback={this.callback.bind(this)} />

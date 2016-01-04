@@ -1,9 +1,12 @@
 import React from 'react'
 import MovieSearchWidget from '../../components/MovieSearchWidget'
+import FacebookLoginContainer from '../../containers/FacebookLoginContainer'
 import {
   Link
 }
 from 'react-router'
+import NavUserContainer from '../../containers/NavUserContainer'
+
 
 export default ({
   history
@@ -40,15 +43,9 @@ export default ({
               <li> <Link to = '/movies/upcoming' > Upcoming </Link></li>
             </ul>
           </li>
-
-          <li className="dropdown">
-            <a href="#" className="dropdown-toggle" data-toggle="dropdown">Login <b className="caret"></b></a>
-            <ul className="dropdown-menu">
-              <li><a href="#" className="active">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
+          <NavUserContainer/>
+          <li>
+              <FacebookLoginContainer/>
           </li>
         </ul>
       </div>
