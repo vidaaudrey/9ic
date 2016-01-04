@@ -6,11 +6,27 @@ import Immutable, {
   fromJS, Map, List
 }
 from 'immutable'
+import {
+  getProfileData
+}
+from '../helpers/apiFirebase'
 
 // To understand more about immutable js,
 // visit https://facebook.github.io/immutable-js/
 
-function getInitalState(recoveryMode = true) {
+// function getInitalStateFromFirebase(firebaseData) {
+//   return new Map(firebaseData)
+//     // getProfileData('893335047440430', function (data) {
+//     //   console.log('firebase data', data)
+//     //   store.dispatch({
+//     //     type: 'SET_STATE',
+//     //     data
+//     //   })
+//     // })
+// }
+
+
+function getInitalState(recoveryMode = false) {
   // if local storage exist and it contains user information, we'll init the store with local storage
   if (recoveryMode) {
     if (typeof (Storage) !== undefined && localStorage.getItem('mindr') !== undefined) {
@@ -64,7 +80,8 @@ function mainReducer(state = getInitalState(), action) {
         }))
         // call this when you hold a snapshort of the state and want to restore it (e.g. local storage)
     case 'SET_STATE':
-      return action.state
+      console.log('setup', action.data)
+      return new Map(action.data)
 
     case 'LIKE':
       return state.merge(new Map({

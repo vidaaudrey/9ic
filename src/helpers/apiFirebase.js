@@ -20,12 +20,13 @@ export const facebookLoginPopUp = () => {
   })
 }
 
-
+// save the whole state tree to firebase
 export const saveMovieData = (userData) => {
   firebaseRef.child(`userData/${userData.userId}`).update(userData)
   console.log('data saved to firebase', userData)
 }
 
+// get the whole state tree from firebase
 export const getProfileData = (userId, callback) => {
   firebaseRef.child(`userData/${userId}`).on('value', (snapshot) => callback(snapshot.val()))
 }
