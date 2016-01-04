@@ -1,6 +1,9 @@
 var Firebase = require('firebase')
+
 export const firebaseRef = new Firebase('https://movtin.firebaseio.com')
+
 export const getAuth = firebaseRef.getAuth()
+
 export const facebookLoginPopUp = () => {
   firebaseRef.authWithOAuthPopup('facebook', (error, authData) => {
     if (error) {
@@ -16,10 +19,13 @@ export const facebookLoginPopUp = () => {
     }
   })
 }
+
+
 export const saveMovieData = (userData) => {
-  console.log('saving to firebase', userData, userData.name)
-  firebaseRef.child(`userData/${userData.name}`).update(userData)
+  firebaseRef.child(`userData/${userData.userId}`).update(userData)
+  console.log('data saved to firebase', userData)
 }
+
 export const getProfileData = (userId, callback) => {
   firebaseRef.child(`userData/${userId}`).on('value', (snapshot) => callback(snapshot.val()))
 }
