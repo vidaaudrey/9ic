@@ -7,7 +7,6 @@ export default () => {
   return (
     <div className="explore-links">
         <ul className="list-inline">
-            <li> <Link to = '/mylikelist' > My List </Link></li>
             <li> <Link to = '/movies/popular' > Popular </Link></li>
             <li> <Link to = '/movies/now_playing' > Now Playing </Link></li>
             <li> <Link to = '/movies/top_rated' > Top Rated </Link></li>

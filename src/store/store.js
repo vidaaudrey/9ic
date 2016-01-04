@@ -10,7 +10,7 @@ from 'immutable'
 // To understand more about immutable js,
 // visit https://facebook.github.io/immutable-js/
 
-function getInitalState(recoveryMode = false) {
+function getInitalState(recoveryMode = true) {
   // if local storage exist and it contains user information, we'll init the store with local storage
   if (recoveryMode) {
     if (typeof (Storage) !== undefined && localStorage.getItem('mindr') !== undefined) {

@@ -239,6 +239,18 @@ footer {
     margin: 8px;
 }
 
+.my-like-list-item {
+    .thumbnail {
+        padding-bottom: 32px;
+        .btn {
+            color: $light-primary-color;
+            &:hover {
+                color: $gray-dark;
+            }
+        }
+    }
+}
+
 
 /*
 * Override  styling

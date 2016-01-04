@@ -174,6 +174,13 @@ footer {
 .facebook-login-container {
   margin: 8px; }
 
+.my-like-list-item .thumbnail {
+  padding-bottom: 32px; }
+  .my-like-list-item .thumbnail .btn {
+    color: #FFECB3; }
+    .my-like-list-item .thumbnail .btn:hover {
+      color: #727272; }
+
 /*
 * Override  styling
 */

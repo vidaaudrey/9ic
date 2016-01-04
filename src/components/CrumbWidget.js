@@ -1,4 +1,3 @@
-
 import React from 'react'
 export default () => {
   return (
@@ -10,7 +9,7 @@ export default () => {
             <li>
                 <a href="#">Movies</a>
             </li>
-            <li className="active">Lorem ipsum dolor</li>
+            <li className="active">Jurassic World </li>
         </ol>
     </div>
   )

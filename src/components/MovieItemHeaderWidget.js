@@ -3,12 +3,20 @@ import PosterImageWidget from './PosterImageWidget'
 import StarRatingWidget from './StarRatingWidget'
 import GenreLinkWidget from './GenreLinkWidget'
 import MovieTextIntroWidget from './MovieTextIntroWidget'
-import LikeButtonsWidget from './LikeButtonsWidget'
-import { getLevelByPopularity } from '../utils/dataOp'
+import LikeButtonsContainer from '../containers/LikeButtonsContainer'
+import {
+  getLevelByPopularity
+}
+from '../utils/dataOp'
 import config from '../config/config'
-import { Link } from 'react-router'
+import {
+  Link
+}
+from 'react-router'
 
-export default ({ title, popularity, overview, poster_path, id, release_date, homepage }) => {
+export default ({
+  title, popularity, overview, poster_path, id, release_date, homepage
+}) => {
   return (
     <div className="row movie-item-header">
        <div className="thumbnail clearfix">
@@ -24,7 +32,7 @@ export default ({ title, popularity, overview, poster_path, id, release_date, ho
                   <a href={ homepage} > Home Page </a>
                </p>
                <MovieTextIntroWidget text={ overview } maxLen={ config.OVERVIEW_MAX_LENGTH } maxHeight="40" />
-               <LikeButtonsWidget/>
+               <LikeButtonsContainer/>
            </div>
        </div>
    </div>
