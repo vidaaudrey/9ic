@@ -17,7 +17,6 @@ store.dispatch({
 })
 
 getProfileData('893335047440430', function (data) {
-  // console.log('firebase data', data)
   store.dispatch({
     type: 'SET_STATE',
     data

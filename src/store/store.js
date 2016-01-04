@@ -7,7 +7,7 @@ import Immutable, {
 }
 from 'immutable'
 import {
-  getProfileData
+  getProfileData, cleanDatabase
 }
 from '../helpers/apiFirebase'
 
@@ -26,8 +26,11 @@ from '../helpers/apiFirebase'
 // }
 
 
-function getInitalState(recoveryMode = false) {
+function getInitalState(recoveryMode = false, willCleanDatabase = true) {
   // if local storage exist and it contains user information, we'll init the store with local storage
+  if (willCleanDatabase) {
+    cleanDatabase()
+  }
   if (recoveryMode) {
     if (typeof (Storage) !== undefined && localStorage.getItem('mindr') !== undefined) {
       const lstoreStr = localStorage.getItem('mindr')
@@ -44,6 +47,7 @@ function getInitalState(recoveryMode = false) {
   return new Map({
     userId: null,
     username: null,
+    isLoggedIn: false,
     avatar: null,
     likes: new List(),
     dislikes: new List()
@@ -64,13 +68,17 @@ function mainReducer(state = getInitalState(), action) {
     case 'LOGIN':
       return state.merge(new Map({
         userId: action.userId,
-        username: action.username
+        username: action.username,
+        isLoggedIn: true,
+        likes: new List(),
+        dislikes: new List()
       }))
     case 'LOGOUT':
       return state.merge(new Map({
         userId: null,
         username: null,
-        avatar: null
+        avatar: null,
+        isLoggedIn: true
       }))
     case 'ADD_AVATAR':
       return state.merge(new Map({
@@ -98,6 +106,11 @@ function mainReducer(state = getInitalState(), action) {
           title: action.title,
           poster: action.poster
         }]
+      }))
+
+    case 'DELETE_LIKE':
+      return state.merge(new Map({
+
       }))
 
     case 'SETUP':

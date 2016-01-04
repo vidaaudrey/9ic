@@ -2,23 +2,23 @@ import React from 'react'
 import apiMisc from '../helpers/apiMisc'
 import config from '../config/config'
 import store
- from '../store/store'
+from '../store/store'
 import FacebookLoginWidget from '../components/FacebookLoginWidget'
 
 
 export default class FacebookLoginContainer extends React.Component {
   constructor(props) {
     super(props)
-    const userId = store.getState().get('userId') || null
     this.state = {
-      userId: userId,
-      isLoggedIn: userId !== null || false,
+      userId: store.getState().get('userId') || null,
+      // isLoggedIn: store.getState().get('isLoggedIn') || false,
+      isLoggedIn: false,
       avatar: config.FB_DEFAULT_AVARTAR_URL
     }
 
     // subscribe to user login and logout events and udpate accordingly(for now, we are just dealing with logout event)
     store.subscribe(() => {
-      if (store.getState().get('userId') !== null) {
+      if (store.getState().get('isLoggedIn')) {
         this.setState({
           isLoggedIn: true
         })

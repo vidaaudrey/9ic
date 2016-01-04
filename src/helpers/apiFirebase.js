@@ -30,3 +30,10 @@ export const saveMovieData = (userData) => {
 export const getProfileData = (userId, callback) => {
   firebaseRef.child(`userData/${userId}`).on('value', (snapshot) => callback(snapshot.val()))
 }
+
+
+// TODO: will need update here
+export const cleanDatabase = () => {
+  firebaseRef.child(`userData/`).update({})
+  console.log('data cleaned at firebase')
+}
