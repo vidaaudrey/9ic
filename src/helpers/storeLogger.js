@@ -4,21 +4,20 @@ import store from '../store/store'
 // good for development and debugging purpose
 export default () => {
   store.subscribe(() => {
+    console.log('*******store updated', store.getState().toObject())
+      //   'userId: ',
+      //   store.getState().get('userId'),
+      //   'username: ',
+      //   store.getState().get('username'),
+      //   'avatar: ',
+      //   store.getState().get('avatar'))
 
-    console.log('*******store updated', store.getState().toJS(),
-      'userId: ',
-      store.getState().get('userId'),
-      'username: ',
-      store.getState().get('username'),
-      'avatar: ',
-      store.getState().get('avatar'))
-
-    if (store.getState().get('likes')) {
-      console.log(
-        'Likes: ',
-        store.getState().get('likes').toJSON(),
-        'Dislikes: ',
-        store.getState().get('dislikes').toJSON())
-    }
+    // if (store.getState().get('likes')) {
+    //   console.log(
+    //     'Likes: ',
+    //     store.getState().get('likes'),
+    //     'Dislikes: ',
+    //     store.getState().get('dislikes'))
+    // }
   })
 }

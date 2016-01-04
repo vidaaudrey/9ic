@@ -143,7 +143,11 @@ getAvatar(userId) {
     - step3: update the GenreListContainer.js 
     - step4: update the GenreListWidget.js and GenreListItemWidget.js
 
-  [ ] Add Like/Dislike  `src/components/LikeButtonsWidget.js`
+  [X] Add Like/Dislike  `src/components/LikeButtonsWidget.js`
+  
+  [ ] Add Like/Dislike List page 
+    - Read from the Redux store and display it 
+    - Deal with repeatition (can't like the same movie multiple times) and contradition  (can't like at dislike the same movie)
 
   [ ] Add pagination `src/components/PagerWidget.js`
 
@@ -176,7 +180,9 @@ getAvatar(userId) {
     - [X] MovieListItem
   * Tinder
     - [ ]
-* Redux
+
+* Redux and Nice To Haves 
+  [ ] Optimize Redux Storage and event flow 
 
 ### Commit Snapshots
 1. d348244  `npm init`
