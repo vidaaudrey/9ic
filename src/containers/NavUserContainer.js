@@ -9,10 +9,12 @@ export default class NavUserContainer extends Component {
 
   constructor(props) {
     super(props)
+    const userId = store.getState().get('userId') || null
     this.state = {
-        isLoggedIn: false
+        isLoggedIn: userId !== null
       }
       // listen to the store update, if there is a user set, update the state 
+    console.log('user logged in?', userId, this.state.isLoggedIn)
     store.subscribe(() => {
       if (store.getState().get('userId') !== null) {
         this.setState({
