@@ -11,12 +11,33 @@ export default class MyLikeListContainer extends Component {
   }
   constructor(props) {
     super(props)
+
+    // how to not repeat this?
     this.state = {
       likes: store.getState().get('likes') || [],
       dislikes: store.getState().get('dislikes') || []
     }
-    console.log('getting likes from store', this.state.likes, this.props.isLike)
   }
+
+  componentDidMount() {
+    store.subscribe(() => {
+      console.log('listening updates', store.getState().get('likes'))
+      this.setState({
+        likes: store.getState().get('likes') || []
+      })
+      this.setState({
+        dislikes: store.getState().get('dislikes') || []
+      })
+
+      // below will not work!
+      // this.setState = {
+      //   likes: store.getState().get('likes') || [],
+      //   dislikes: store.getState().get('dislikes') || []
+      // }
+    })
+  }
+
+
 
   render() {
     return (

@@ -6,7 +6,7 @@ from 'react-router'
 
 import DeleteButtonContainer from '../containers/DeleteButtonContainer'
 export default ({
-  title, poster, id, placeholder = '300x300'
+  title, poster, id, placeholder = '300x300', deleteUICallback
 }) => {
   // console.log('movie', title, getLevelByPopularity(popularity), overview, `${config.TMDB_IMAGE_BASEURL}w500${poster_path}`);
   return (
@@ -20,7 +20,9 @@ export default ({
           <Link to={ `/movie/${ id }/` } className="movie-title">
               <h4>{ title }</h4>
           </Link>
-          <DeleteButtonContainer id={id} />
+          <DeleteButtonContainer
+            deleteUICallback={deleteUICallback}
+            id={id} />
          </div>
        </div>
      </div>

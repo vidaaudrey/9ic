@@ -97,10 +97,7 @@ function mainReducer(state = getInitalState(), action) {
       }))
 
     case 'DELETE_LIKE':
-      let likes = state.get('likes')
-      console.log('****likes-before', likes, likes.length, action.id)
-      likes = likes.filter(item => item.id !== action.id)
-      console.log('****likes-after', likes, likes.length, action.id)
+      const likes = state.get('likes').filter(item => item.id !== action.id)
       return state.merge(new Map({
         likes: List.of(...likes)
       }))

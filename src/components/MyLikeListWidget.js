@@ -24,7 +24,8 @@ function renderLikesHTML(likes) {
     )
   }
   const likesHTML = (
-    likes.map((like) => <MyLikeListItemWidget key={ like.id } {...like} />)
+    likes.map((like) => <MyLikeListItemWidget
+ key={ like.id } {...like} />)
   )
   return (
     <div>
@@ -34,7 +35,7 @@ function renderLikesHTML(likes) {
     </div>
   )
 }
-
+// deal with deleteUICallback, remove UI first 
 export default ({
   likes, dislikes, isLike
 }) => {

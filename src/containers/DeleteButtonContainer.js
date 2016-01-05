@@ -7,7 +7,8 @@ import store from '../store/store'
 
 export default class DeleteButtonContainer extends Component {
   static propTypes = {
-    id: PropTypes.number
+    id: PropTypes.number,
+    deleteUICallback: PropTypes.func
   }
   deleteCallback(event) {
     console.log('prevent default delete')
