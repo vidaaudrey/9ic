@@ -152,7 +152,14 @@ function mainReducer(state = getInitalState(), action) {
       // console.log(action.data, action.data)
 
     case 'SETUP':
-      return state
+      return new Map({
+        userId: action.data.id,
+        username: action.data.displayName,
+        isLoggedIn: true,
+        avatar: action.data.profileImageURL,
+        likes: action.likes,
+        dislikes: action.dislikes
+      })
     default:
       return state
   }

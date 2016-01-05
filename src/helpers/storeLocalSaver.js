@@ -20,7 +20,9 @@ export default () => {
     console.log('**** new state detected, obj:', obj, 'username: ', obj.username, 'id', obj.userId)
       // console.log('**** new store state detected', store.getState().get('username'), 'userId:', store.getState().get('userId'))
       // try to save the store.getState() object  to firebase here
-    saveMovieData(obj)
+    if (obj.username) {
+      saveMovieData(obj)
+    }
 
     if (typeof (Storage) === undefined) {
       console.log('Sorry, your browser doesnot support local storage support. And our server version is still under development.')

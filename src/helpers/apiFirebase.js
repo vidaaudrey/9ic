@@ -14,18 +14,6 @@ export const facebookLoginPopUp = () => {
     if (error) {
       console.log('Login Failed!', error)
     } else {
-
-      getProfileData(authData.facebook.id, function (data) {
-        console.log('--------firebase on login-start', data)
-
-        store.dispatch({
-          type: 'LOGIN1',
-          data: authData.facebook,
-          likes: data.likes || [],
-          dislikes: data.dislikes || []
-        })
-      })
-
       console.log(authData)
       firebaseRef.child('users').child(authData.uid).set({
         provider: authData.provider,
@@ -33,9 +21,30 @@ export const facebookLoginPopUp = () => {
         id: authData.facebook.id,
         avatar: authData.facebook.profileImageURL
       })
+
+      getProfileData(authData.facebook.id, function (data) {
+        if (!data) {
+          console.log('--------firebase on login-start--no profile data-', data)
+          store.dispatch({
+            type: 'SETUP',
+            data: authData.facebook,
+            likes: [],
+            dislikes: []
+          })
+        } else {
+          console.log('--------firebase on login-start-- found profile data-', data)
+          store.dispatch({
+            type: 'LOGIN1',
+            data: authData.facebook,
+            likes: data.likes || [],
+            dislikes: data.dislikes || []
+          })
+        }
+      })
     }
   })
 }
+
 
 // save the whole state tree to firebase
 export const saveMovieData = (userData) => {
