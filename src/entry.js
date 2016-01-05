@@ -12,16 +12,16 @@ from './helpers/apiFirebase'
 storeLogger()
 
 // initialize the app state with store data
-store.dispatch({
-  type: 'SETUP'
-})
+// store.dispatch({
+//   type: 'SETUP'
+// })
 
-getProfileData('893335047440430', function (data) {
-  store.dispatch({
-    type: 'SET_STATE',
-    data
-  })
-})
+// getProfileData('893335047440430', function (data) {
+//   store.dispatch({
+//     type: 'SET_STATE',
+//     data
+//   })
+// })
 
 
 // save store data to local storage 

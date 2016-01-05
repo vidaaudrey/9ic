@@ -4,15 +4,28 @@ export const firebaseRef = new Firebase('https://movtin.firebaseio.com')
 
 export const getAuth = firebaseRef.getAuth()
 
+// get the whole state tree from firebase
+export const getProfileData = (userId, callback) => {
+  firebaseRef.child(`userData/${userId}`).on('value', (snapshot) => callback(snapshot.val()))
+}
+
 export const facebookLoginPopUp = () => {
   firebaseRef.authWithOAuthPopup('facebook', (error, authData) => {
     if (error) {
       console.log('Login Failed!', error)
     } else {
-      store.dispatch({
-        type: 'LOGIN1',
-        data: authData.facebook
+
+      getProfileData(authData.facebook.id, function (data) {
+        console.log('--------firebase on login-start', data)
+
+        store.dispatch({
+          type: 'LOGIN1',
+          data: authData.facebook,
+          likes: data.likes || [],
+          dislikes: data.dislikes || []
+        })
       })
+
       console.log(authData)
       firebaseRef.child('users').child(authData.uid).set({
         provider: authData.provider,
@@ -30,10 +43,16 @@ export const saveMovieData = (userData) => {
   console.log('data saved to firebase', userData)
 }
 
-// get the whole state tree from firebase
-export const getProfileData = (userId, callback) => {
-  firebaseRef.child(`userData/${userId}`).on('value', (snapshot) => callback(snapshot.val()))
-}
+
+
+// export const getProfileDataDispatchCallback = (id) => {
+//   getProfileData(id, function (data) {
+//     store.dispatch({
+//       type: 'SET_STATE_LIKE',
+//       data: data
+//     })
+//   })
+// }
 
 
 // TODO: will need update here

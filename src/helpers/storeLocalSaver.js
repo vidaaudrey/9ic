@@ -17,7 +17,7 @@ function stringifyDeep(obj) {
 export default () => {
   store.subscribe(() => {
     const obj = store.getState().toJS()
-    console.log('**** new state detected', obj, 'username: ', obj.username, 'id', obj.userId)
+    console.log('**** new state detected, obj:', obj, 'username: ', obj.username, 'id', obj.userId)
       // console.log('**** new store state detected', store.getState().get('username'), 'userId:', store.getState().get('userId'))
       // try to save the store.getState() object  to firebase here
     saveMovieData(obj)

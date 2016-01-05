@@ -5,7 +5,6 @@ import store
 from '../store/store'
 import FacebookLoginWidget from '../components/FacebookLoginWidget'
 
-
 export default class FacebookLoginContainer extends React.Component {
   constructor(props) {
     super(props)
@@ -16,13 +15,13 @@ export default class FacebookLoginContainer extends React.Component {
     }
 
     // subscribe to user login and logout events and udpate accordingly(for now, we are just dealing with logout event)
-    store.subscribe(() => {
-      if (store.getState().get('isLoggedIn')) {
-        this.setState({
-          isLoggedIn: true
-        })
-      }
-    })
+    // store.subscribe(() => {
+    //   if (store.getState().get('isLoggedIn')) {
+    //     this.setState({
+    //       isLoggedIn: true
+    //     })
+    //   }
+    // })
   }
 
   // when user click login, this function will be called 
@@ -55,16 +54,24 @@ export default class FacebookLoginContainer extends React.Component {
         }
       })
   }
-
   render() {
     return (
       <div>
-        <FacebookLoginWidget
-            userId={this.state.userId}
-            isLoggedIn={this.state.isLoggedIn}
-            avatar={this.state.avatar}
-            callback={this.callback.bind(this)} />
-      </div>
+        
+        </div>
     )
   }
 }
+
+//   render() {
+//     return (
+//       <div>
+//         <FacebookLoginWidget
+//             userId={this.state.userId}
+//             isLoggedIn={this.state.isLoggedIn}
+//             avatar={this.state.avatar}
+//             callback={this.callback.bind(this)} />
+//       </div>
+//     )
+//   }
+// }

@@ -15,7 +15,7 @@ export default ({
             </div>
         </div>
         <div>
-            <button onClick={facebookLoginPopUp}></button>
+            <button onClick={facebookLoginPopUp}>Login</button>
         </div>
 
     </div>

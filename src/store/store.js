@@ -7,12 +7,12 @@ import Immutable, {
 }
 from 'immutable'
 import {
-  getProfileData, cleanDatabase
+  getProfileData, cleanDatabase, getProfileDataDispatchCallback
 }
 from '../helpers/apiFirebase'
-
-// To understand more about immutable js,
-// visit https://facebook.github.io/immutable-js/
+import apiMisc from '../helpers/apiMisc'
+  // To understand more about immutable js,
+  // visit https://facebook.github.io/immutable-js/
 
 // function getInitalStateFromFirebase(firebaseData) {
 //   return new Map(firebaseData)
@@ -24,6 +24,8 @@ from '../helpers/apiFirebase'
 //     //   })
 //     // })
 // }
+
+
 
 
 function getInitalState(recoveryMode = false, willCleanDatabase = true) {
@@ -49,8 +51,8 @@ function getInitalState(recoveryMode = false, willCleanDatabase = true) {
     username: null,
     isLoggedIn: false,
     avatar: null,
-    likes: new List(),
-    dislikes: new List()
+    likes: new List([]),
+    dislikes: new List([])
   })
 
   // return new Map({
@@ -82,8 +84,6 @@ function mainReducer(state = getInitalState(), action) {
       }))
     case 'ADD_AVATAR':
       return state.merge(new Map({
-          userId: state.get('userId'),
-          username: state.get('username'),
           avatar: action.avatar
         }))
         // call this when you hold a snapshort of the state and want to restore it (e.g. local storage)
@@ -114,13 +114,42 @@ function mainReducer(state = getInitalState(), action) {
       }))
 
     case 'LOGIN1':
-
-      console.log(action.data, action.data)
+      console.log('--------firebase on login', action.data.id)
       return state.merge(new Map({
         userId: action.data.id,
-        name: action.data.displayName,
-        avatar: action.data.profileImageURL
+        username: action.data.displayName,
+        isLoggedIn: true,
+        avatar: action.data.profileImageURL,
+        likes: action.likes,
+        dislikes: action.dislikes
       }))
+
+      // apiMisc.getAvatarByUserId(action.data.id)
+      // return new Map({
+      //   userId: action.data.id,
+      //   isLoggedIn: true,
+      //   username: action.data.displayName,
+      //   likes: new List([]),
+      //   dislikes: new List([])
+      // })
+      // const newState = state.merge(new Map({
+      //   userId: action.data.id,
+      //   isLoggedIn: true,
+      //   username: action.data.displayName
+      // }))
+      // getProfileData(action.data.id, function (data) {
+      //   return new Map({
+      //     userId: action.data.id,
+      //     isLoggedIn: true,
+      //     username: action.data.displayName,
+      //     likes: List.of(data.likes),
+      //     dislikes: List.of(data.dislikes)
+      //   })
+      // })
+
+
+      // getProfileDataDispatchCallback(action.data.id)
+      // console.log(action.data, action.data)
 
     case 'SETUP':
       return state
