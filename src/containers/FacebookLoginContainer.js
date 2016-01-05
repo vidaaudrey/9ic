@@ -4,6 +4,10 @@ import config from '../config/config'
 import store
 from '../store/store'
 import FacebookLoginWidget from '../components/FacebookLoginWidget'
+import {
+  facebookLoginPopUp
+}
+from '../helpers/apiFirebase'
 
 export default class FacebookLoginContainer extends React.Component {
   constructor(props) {
@@ -13,65 +17,34 @@ export default class FacebookLoginContainer extends React.Component {
       isLoggedIn: store.getState().get('isLoggedIn') || false,
       avatar: config.FB_DEFAULT_AVARTAR_URL
     }
-
-    // subscribe to user login and logout events and udpate accordingly(for now, we are just dealing with logout event)
-    // store.subscribe(() => {
-    //   if (store.getState().get('isLoggedIn')) {
-    //     this.setState({
-    //       isLoggedIn: true
-    //     })
-    //   }
-    // })
   }
 
-  // when user click login, this function will be called 
-  callback(response) {
-      store.dispatch({
-        type: 'LOGIN',
-        userId: response.id,
-        username: response.name
-      })
-      this.setState({
-        userId: response.id,
-        isLoggedIn: true
-      })
-
-      // now user is logged in, we'll fetch the avatar info
-      this.getAvatar(response.id)
-    }
-    // get remote avatar url and add that url to the store 
-  getAvatar(userId) {
-    apiMisc.getFBAvatar(userId)
-      .then(data => {
-        if (!data.is_silhouette) {
-          this.setState({
-            avatar: data.url,
-          })
-          store.dispatch({
-            type: 'ADD_AVATAR',
-            avatar: data.url
-          })
-        }
-      })
+  componentDidMount() {
+    store.subscribe(() => {
+      if (store.getState().get('isLoggedIn')) {
+        this.setState({
+          isLoggedIn: true,
+          userId: store.getState().get('userId'),
+          avatar: store.getState().get('avatar')
+        })
+      } else {
+        this.setState({
+          isLoggedIn: false,
+          userId: store.getState().get('userId') || null,
+          avatar: config.FB_DEFAULT_AVARTAR_URL
+        })
+      }
+    })
   }
+  componentWillUnmount() {
+    store.subscribe()
+  }
+
   render() {
-    return (
-      <div>
-        
-        </div>
-    )
+    return <FacebookLoginWidget
+      callback={facebookLoginPopUp}
+      userId={this.state.userId}
+      avatar={this.state.avatar}
+      isLoggedIn={this.state.isLoggedIn} />
   }
 }
-
-//   render() {
-//     return (
-//       <div>
-//         <FacebookLoginWidget
-//             userId={this.state.userId}
-//             isLoggedIn={this.state.isLoggedIn}
-//             avatar={this.state.avatar}
-//             callback={this.callback.bind(this)} />
-//       </div>
-//     )
-//   }
-// }

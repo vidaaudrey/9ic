@@ -14,10 +14,6 @@ export default ({
                 <HomeContainer history={ history }/>
             </div>
         </div>
-        <div>
-            <button onClick={facebookLoginPopUp}>Login</button>
-        </div>
-
     </div>
   )
 }

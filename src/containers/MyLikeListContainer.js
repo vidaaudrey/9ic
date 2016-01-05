@@ -20,24 +20,26 @@ export default class MyLikeListContainer extends Component {
   }
 
   componentDidMount() {
-    store.subscribe(() => {
-      console.log('listening updates', store.getState().get('likes'))
-      this.setState({
-        likes: store.getState().get('likes') || []
-      })
-      this.setState({
-        dislikes: store.getState().get('dislikes') || []
-      })
+    // store.subscribe(() => {
+    //   console.log('listening updates', store.getState().get('likes'))
+    //   this.setState({
+    //     likes: store.getState().get('likes') || []
+    //   })
+    //   this.setState({
+    //     dislikes: store.getState().get('dislikes') || []
+    //   })
 
-      // below will not work!
-      // this.setState = {
-      //   likes: store.getState().get('likes') || [],
-      //   dislikes: store.getState().get('dislikes') || []
-      // }
-    })
+    // below will not work!
+    // this.setState = {
+    //   likes: store.getState().get('likes') || [],
+    //   dislikes: store.getState().get('dislikes') || []
+    // }
+    // })
   }
 
-
+  componentWillUnmount() {
+    // store.subscribe()
+  }
 
   render() {
     return (
