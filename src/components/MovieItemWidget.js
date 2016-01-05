@@ -12,7 +12,7 @@ export default ({
 
   return (
     <div className="movie-item">
-        <CrumbWidget/>
+        <CrumbWidget first="Home" second="Movies" third={movie.title}/>
         <MovieItemHeaderWidget {...movie} />
         <MovieItemBodyWidget {...movie} />
         <ReviewListWidget {...movie} />

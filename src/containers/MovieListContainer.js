@@ -41,8 +41,8 @@ export default class MovieListContainer extends Component {
     if (props.filter.keywords) {
       filter = props.filter.keywords
       moviesPromise = apiTMDB.getMoviesByKeywords(filter)
-    } else if (props.filter.category) {
-      filter = props.filter.category
+    } else {
+      filter = props.filter.category || 'popular'
       moviesPromise = apiTMDB.getMoviesByCategory(filter)
     }
     // console.log('true filter: ', filter)

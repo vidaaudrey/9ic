@@ -18,6 +18,7 @@ export default (
             </Route>
             <Route path="search/:keywords" component={MovieListPage} >
             </Route>
+            <Route path="movies/" component={MovieListPage} />
             <Route path="movie/:id" component={MovieItemPage} />
             <Route path="mylikelist/:isLike" component={MyLikeListPage} />
             <Route path="genre/" component={GenreListPage} />
