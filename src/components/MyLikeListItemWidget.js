@@ -4,7 +4,7 @@ import {
 }
 from 'react-router'
 
-
+import DeleteButtonContainer from '../containers/DeleteButtonContainer'
 export default ({
   title, poster, id, placeholder = '300x300'
 }) => {
@@ -20,9 +20,7 @@ export default ({
           <Link to={ `/movie/${ id }/` } className="movie-title">
               <h4>{ title }</h4>
           </Link>
-           <a href="#" className="btn pull-right" role="button">
-            <i className="fa fa-trash fa-2x"></i>
-           </a>
+          <DeleteButtonContainer id={id} />
          </div>
        </div>
      </div>

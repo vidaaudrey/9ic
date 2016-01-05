@@ -14,18 +14,6 @@ import apiMisc from '../helpers/apiMisc'
   // To understand more about immutable js,
   // visit https://facebook.github.io/immutable-js/
 
-// function getInitalStateFromFirebase(firebaseData) {
-//   return new Map(firebaseData)
-//     // getProfileData('893335047440430', function (data) {
-//     //   console.log('firebase data', data)
-//     //   store.dispatch({
-//     //     type: 'SET_STATE',
-//     //     data
-//     //   })
-//     // })
-// }
-
-
 
 
 function getInitalState(recoveryMode = false, willCleanDatabase = true) {
@@ -109,12 +97,16 @@ function mainReducer(state = getInitalState(), action) {
       }))
 
     case 'DELETE_LIKE':
+      let likes = state.get('likes')
+      console.log('****likes-before', likes, likes.length, action.id)
+      likes = likes.filter(item => item.id !== action.id)
+      console.log('****likes-after', likes, likes.length, action.id)
       return state.merge(new Map({
-
+        likes: List.of(...likes)
       }))
 
+
     case 'LOGIN1':
-      console.log('--------firebase on login', action.data.id)
       return state.merge(new Map({
         userId: action.data.id,
         username: action.data.displayName,
@@ -123,33 +115,6 @@ function mainReducer(state = getInitalState(), action) {
         likes: action.likes,
         dislikes: action.dislikes
       }))
-
-      // apiMisc.getAvatarByUserId(action.data.id)
-      // return new Map({
-      //   userId: action.data.id,
-      //   isLoggedIn: true,
-      //   username: action.data.displayName,
-      //   likes: new List([]),
-      //   dislikes: new List([])
-      // })
-      // const newState = state.merge(new Map({
-      //   userId: action.data.id,
-      //   isLoggedIn: true,
-      //   username: action.data.displayName
-      // }))
-      // getProfileData(action.data.id, function (data) {
-      //   return new Map({
-      //     userId: action.data.id,
-      //     isLoggedIn: true,
-      //     username: action.data.displayName,
-      //     likes: List.of(data.likes),
-      //     dislikes: List.of(data.dislikes)
-      //   })
-      // })
-
-
-      // getProfileDataDispatchCallback(action.data.id)
-      // console.log(action.data, action.data)
 
     case 'SETUP':
       return new Map({
