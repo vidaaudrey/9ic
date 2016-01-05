@@ -6,6 +6,8 @@ import {
   Link
 }
 from 'react-router'
+import FacebookLoginContainer from '../containers/FacebookLoginContainer'
+
 
 function renderHeaderLink(isLike) {
   if (isLike) {
@@ -35,15 +37,23 @@ function renderLikesHTML(likes) {
     </div>
   )
 }
-// deal with deleteUICallback, remove UI first 
+// deal with deleteUICallback, remove UI first
 export default ({
-  likes, dislikes, isLike
+  likes, dislikes, isLike, isLoggedIn
 }) => {
+  const callToAction = (
+      <div className="well well-lg">
+        <h1> Log in or create an account to save your list </h1>
+        <FacebookLoginContainer/>
+        <small>Your data will be stored locally in your browser.</small>
+      </div>
+    )
   return (
     <div className="col-sm-12 col-md-12 my-like-list">
         <h1>My {isLike ? 'YES' :  'NO'} List</h1>
         {renderHeaderLink(isLike)}
         {isLike ? renderLikesHTML(likes) : renderLikesHTML(dislikes)}
+        {isLoggedIn ? null : callToAction }
       </div>
   )
 }

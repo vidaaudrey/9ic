@@ -55,21 +55,23 @@ function getInitalState(recoveryMode = false, willCleanDatabase = true) {
 function mainReducer(state = getInitalState(), action) {
   console.log('----dispatching action', action.type)
   switch (action.type) {
-    case 'LOGIN':
-      return state.merge(new Map({
-        userId: action.userId,
-        username: action.username,
-        isLoggedIn: true,
-        likes: new List(),
-        dislikes: new List()
-      }))
+    // case 'LOGIN':
+    //   return state.merge(new Map({
+    //     userId: action.userId,
+    //     username: action.username,
+    //     isLoggedIn: true,
+    //     likes: new List(),
+    //     dislikes: new List()
+    //   }))
     case 'LOGOUT':
-      return state.merge(new Map({
+      return new Map({
         userId: null,
         username: null,
+        isLoggedIn: false,
         avatar: null,
-        isLoggedIn: true
-      }))
+        likes: new List([]),
+        dislikes: new List([])
+      })
     case 'ADD_AVATAR':
       return state.merge(new Map({
           avatar: action.avatar

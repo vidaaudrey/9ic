@@ -15,7 +15,8 @@ export default class MyLikeListContainer extends Component {
     // how to not repeat this?
     this.state = {
       likes: store.getState().get('likes') || [],
-      dislikes: store.getState().get('dislikes') || []
+      dislikes: store.getState().get('dislikes') || [],
+      isLoggedIn: store.getState().get('isLoggedIn') || false
     }
   }
 
@@ -43,7 +44,7 @@ export default class MyLikeListContainer extends Component {
 
   render() {
     return (
-      <MyLikeListWidget likes={this.state.likes} dislikes={this.state.dislikes} isLike={this.props.isLike !== 'no'}/>
+      <MyLikeListWidget isLoggedIn={this.state.isLoggedIn} likes={this.state.likes} dislikes={this.state.dislikes} isLike={this.props.isLike !== 'no'}/>
     )
   }
 }

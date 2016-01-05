@@ -52,6 +52,7 @@ export const saveMovieData = (userData) => {
   console.log('data saved to firebase', userData)
 }
 
+export const logOut = () => firebaseRef.unauth()
 
 
 // export const getProfileDataDispatchCallback = (id) => {
